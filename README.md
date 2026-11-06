@@ -82,3 +82,9 @@ https://github.com/user-attachments/assets/e55e28e0-42aa-4bb6-ada9-eb557965b37c
 ### 在浏览器中使用
 
 打开站点地址[placeholder]。从 **实时动态 → 精选** 浏览近期要闻，或从 **保险日报** 读当天刊物。上述阅读入口可直接浏览，跨设备同步时再登录。
+
+## Star 历史
+
+![GitHub Star 曲线，2026 年 11 月 5 日至 6 日均为 0](docs/assets/readme/star-history.svg)
+
+GitHub Star 数据快照，日期按 UTC 统计。 [查看在线 Star 历史](https://www.star-history.com/?repos=FDU-INS%2FInsurance-Hot&type=date)

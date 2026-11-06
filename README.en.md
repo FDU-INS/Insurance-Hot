@@ -88,3 +88,8 @@ In **Tool access**, choose the integration you need. **RSS feeds** bring picks, 
 
 Open the site address supplied by your deployment operator. Go to **Latest news → Picks** for recent headlines, or open **Insurance daily** for the current issue. These reading views are available to guests. Sign in when you want to sync across devices.
 
+## Star history
+
+![GitHub Star history showing zero stars on November 5 and 6, 2026](docs/assets/readme/star-history.svg)
+
+Snapshot of GitHub Star data. Dates are in UTC. [View Star History online](https://www.star-history.com/?repos=FDU-INS%2FInsurance-Hot&type=date)

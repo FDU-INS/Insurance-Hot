@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="248" viewBox="0 0 720 248" role="img" aria-labelledby="title description">
+  <title id="title">GitHub Star history</title>
+  <desc id="description">Insurance-Hot had zero stars on November 5 and November 6, 2026.</desc>
+  <style>
+    svg { font: 16px system-ui, sans-serif; }
+    .label { fill: #57606a; }
+    .grid { stroke: #d0d7de; }
+    .series { stroke: #0969da; fill: #0969da; }
+    @media (prefers-color-scheme: dark) {
+      .label { fill: #9198a1; }
+      .grid { stroke: #3d444d; }
+      .series { stroke: #58a6ff; fill: #58a6ff; }
+    }
+  </style>
+  <text class="label" x="64" y="28">GitHub Stars</text>
+  <path class="grid" d="M64 56H656 M64 122H656 M64 188H656"/>
+  <g class="label" text-anchor="end">
+    <text x="48" y="62">2</text>
+    <text x="48" y="128">1</text>
+    <text x="48" y="194">0</text>
+  </g>
+  <path class="series" d="M64 188H656" stroke-width="3"/>
+  <circle class="series" cx="64" cy="188" r="4"/>
+  <circle class="series" cx="656" cy="188" r="4"/>
+  <g class="label">
+    <text x="64" y="221">2026-11-05</text>
+    <text x="656" y="221" text-anchor="end">2026-11-06</text>
+  </g>
+</svg>
