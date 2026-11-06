@@ -1,12 +1,20 @@
 [简体中文](README.md) · **English**
 
-# <img src="docs/assets/readme/brand-lockup.svg" alt="InsuranceHot" width="408">
+<p align="center">
+  <img src="docs/assets/readme/brand-lockup.svg" alt="InsuranceHot" width="408">
+</p>
 
-**Insurance news, from first report to follow-up.**
+<p align="center"><strong>Insurance news, from first report to follow-up.</strong></p>
 
 InsuranceHot is a news desk for insurance professionals, researchers, and industry readers. Browse regulatory announcements, company disclosures, and trade coverage in one place. Use live picks and trending events to decide what to follow, then turn to timelines, briefings, and original sources for the full story.
 
-[Product showcase](#product-showcase) · [Reader guide](#reader-guide) · [Getting started](#getting-started)
+<p align="center">
+  <strong>
+    <a href="#product-showcase">Product showcase</a> ·
+    <a href="#reader-guide">Reader guide</a> ·
+    <a href="#getting-started">Getting started</a>
+  </strong>
+</p>
 
 ## Promo video
 
