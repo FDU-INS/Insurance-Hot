@@ -23,11 +23,11 @@ https://github.com/user-attachments/assets/0bf97c5d-ccb3-43ff-9e3a-863bd908fbde
 ## Product showcase
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/featured-dark.png">
-  <img src="docs/assets/readme/featured-light.png" alt="InsuranceHot live picks with section navigation on the left, article summaries and original links in the center, and trending events on the right" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/en/featured-dark.png">
+  <img src="docs/assets/readme/en/featured-light.png" alt="InsuranceHot Live picks with International selected, showing article summaries and links to original reports" width="100%">
 </picture>
 
-*Live picks brings recent headlines, their sources, and trending events together. Captured on the running site on November 6, 2026.*
+*Live picks shows recent international headlines alongside their sources. Captured on the running site on November 6, 2026.*
 
 ## Reader guide
 
@@ -43,7 +43,7 @@ Use the search box in the news feed. Choose time order to search titles and summ
 
 In **Categories & topics**, browse directories for **Categories**, **Organizations**, **Topics**, and **Insurance lines**. Organization pages let you switch between all coverage and picks to see how a story fits into that organization's timeline.
 
-![Latest news showing search results, sort options, and expanded filters](docs/assets/readme/timeline-search-light.png)
+![International news search results with sort options and expanded filters](docs/assets/readme/en/timeline-search-light.png)
 
 ### 03 · Follow trending events back to their sources
 
@@ -51,9 +51,9 @@ Open **Trending** and switch between **China** and **International** to see rank
 
 Open an event to compare coverage in its background, developments, and reporting timeline. Change the timeline order or show official or featured reports only. Article pages show the publisher and original publication date, with the time the article was added listed separately. Use **Open original** to check the publisher's page. Automated summaries, explanations, and event overviews help you scan the coverage. Consult the original for anything you cite. Use the article’s action menu to copy its link or export it as Markdown.
 
-![Trending events with market tabs, historical lookup, activity charts, and reporting sources](docs/assets/readme/hot-dark.png)
+![International trending events with historical lookup, activity charts, and reporting sources](docs/assets/readme/en/hot-dark.png)
 
-[View an event detail screenshot](docs/assets/readme/story-dark.png)
+[View an event detail screenshot](docs/assets/readme/en/story-dark.png)
 
 ### 04 · Read the daily, weekly, and monthly editions
 
@@ -61,7 +61,7 @@ Open **Insurance daily** for the **Rolling daily**, or select a finalized issue 
 
 Use the **Weekly** and **Monthly** tabs to review a period's developments by section. The daily archive lets you find older issues by date.
 
-![Rolling daily with the issue date, coverage window, update status, and China and international editions](docs/assets/readme/daily-light.png)
+![International section of the rolling daily with top stories and links to original reports](docs/assets/readme/en/daily-light.png)
 
 ### 05 · Save stories and make the site your own
 
@@ -72,7 +72,7 @@ Use **My account** to manage your account or change reading preferences. The sit
 <details>
 <summary>View a mobile article page</summary>
 
-<img src="docs/assets/readme/article-mobile-dark.png" alt="Mobile article page with the publisher, original date, summary, and original source link" width="320">
+<img src="docs/assets/readme/en/article-mobile-dark.png" alt="Mobile article page with the publisher, original date, summary, and original source link" width="320">
 
 </details>
 
