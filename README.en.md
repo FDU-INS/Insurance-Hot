@@ -1,5 +1,3 @@
-https://github.com/user-attachments/assets/0bf97c5d-ccb3-43ff-9e3a-863bd908fbde
-
 [简体中文](README.md) · **English**
 
 # <img src="docs/assets/readme/brand-lockup.svg" alt="InsuranceHot" width="408">
@@ -9,6 +7,10 @@ https://github.com/user-attachments/assets/0bf97c5d-ccb3-43ff-9e3a-863bd908fbde
 InsuranceHot is a news desk for insurance professionals, researchers, and industry readers. Browse regulatory announcements, company disclosures, and trade coverage in one place. Use live picks and trending events to decide what to follow, then turn to timelines, briefings, and original sources for the full story.
 
 [Product showcase](#product-showcase) · [Reader guide](#reader-guide) · [Getting started](#getting-started)
+
+## Promo video
+
+https://github.com/user-attachments/assets/0bf97c5d-ccb3-43ff-9e3a-863bd908fbde
 
 ## Product showcase
 
