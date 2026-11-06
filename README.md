@@ -1,8 +1,8 @@
+https://github.com/user-attachments/assets/e55e28e0-42aa-4bb6-ada9-eb557965b37c
+
 **简体中文** · [English](README.en.md)
 
-<img src="docs/assets/readme/brand-icon.png" alt="InsuranceHot" width="44" height="44">
-
-# InsuranceHot
+# <img src="docs/assets/readme/brand-lockup.svg" alt="InsuranceHot" width="408">
 
 **Insurance news, from first report to follow-up.**
 
