@@ -1,4 +1,4 @@
-**简体中文** · [English](README.en.md)
+**简体中文** · [English](README.en.md) · [![Hits](https://hits.sh/github.com/FDU-INS/Insurance-Hot.svg?style=flat-square&label=Hits&color=0969da)](https://hits.sh/github.com/FDU-INS/Insurance-Hot/)
 
 
 <p align="center">
@@ -85,6 +85,9 @@ https://github.com/user-attachments/assets/e55e28e0-42aa-4bb6-ada9-eb557965b37c
 
 ## Star 历史
 
-![GitHub Star 曲线，2026 年 11 月 5 日至 6 日均为 0](docs/assets/readme/star-history.svg)
-
-GitHub Star 数据快照，日期按 UTC 统计。 [查看在线 Star 历史](https://www.star-history.com/?repos=FDU-INS%2FInsurance-Hot&type=date)
+<a href="https://www.star-history.com/?repos=FDU-INS%2FInsurance-Hot&amp;type=date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=fdu-ins/insurance-hot&amp;type=date&amp;theme=dark">
+    <img src="https://api.star-history.com/chart?repos=fdu-ins/insurance-hot&amp;type=date" alt="GitHub Star 历史曲线">
+  </picture>
+</a>

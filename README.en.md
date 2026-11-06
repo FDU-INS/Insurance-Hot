@@ -1,4 +1,4 @@
-[简体中文](README.md) · **English**
+[简体中文](README.md) · **English** · [![Hits](https://hits.sh/github.com/FDU-INS/Insurance-Hot.svg?style=flat-square&label=Hits&color=0969da)](https://hits.sh/github.com/FDU-INS/Insurance-Hot/)
 
 <p align="center">
   <img src="docs/assets/readme/brand-lockup.svg" alt="InsuranceHot" width="408">
@@ -90,6 +90,9 @@ Open the site address supplied by your deployment operator. Go to **Latest news 
 
 ## Star history
 
-![GitHub Star history showing zero stars on November 5 and 6, 2026](docs/assets/readme/star-history.svg)
-
-Snapshot of GitHub Star data. Dates are in UTC. [View Star History online](https://www.star-history.com/?repos=FDU-INS%2FInsurance-Hot&type=date)
+<a href="https://www.star-history.com/?repos=FDU-INS%2FInsurance-Hot&amp;type=date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=fdu-ins/insurance-hot&amp;type=date&amp;theme=dark">
+    <img src="https://api.star-history.com/chart?repos=fdu-ins/insurance-hot&amp;type=date" alt="GitHub Star history chart">
+  </picture>
+</a>
