@@ -17,8 +17,6 @@
   <img src="docs/assets/readme/featured-light.png" alt="InsuranceHot 实时精选，左侧为栏目导航，中间展示新闻摘要、推荐理由和原文入口，右侧列出当前热点" width="100%">
 </picture>
 
-*实时精选把近期要闻、报道出处和当前热点放在同一页。图为 2026 年 11 月 6 日的实际站点。*
-
 ## 使用指南
 
 ### 01 · 扫描要闻，浏览实时动态
