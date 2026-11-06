@@ -1,12 +1,17 @@
 **简体中文** · [English](README.en.md)
 
-# <img src="docs/assets/readme/brand-lockup.svg" alt="InsuranceHot" width="408">
 
-**Insurance news, from first report to follow-up.**
+<p align="center">
+  <img src="docs/assets/readme/brand-lockup.svg" alt="InsuranceHot" width="408">
+</p>
+
+
+
+**<div align="center">Insurance news, from first report to follow-up.</div>**
 
 面向保险从业者、研究者和行业读者的资讯平台。在一个入口浏览监管公告、机构披露和行业报道，从实时精选和热点榜找到值得跟进的事，再沿事件时间线、日报和原文查清来龙去脉。
 
-[产品一览](#产品一览) · [使用指南](#使用指南) · [快速开始](#快速开始)
+**<div align="center">[产品一览](#产品一览) · [使用指南](#使用指南) · [快速开始](#快速开始)</div>**
 
 ## 宣传视频
 
