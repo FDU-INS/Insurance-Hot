@@ -9,5 +9,3 @@
 | `agents/openai.yaml` | Codex 等客户端的技能元数据 |
 
 **安装**：最简单的方式是一句话接入，见[项目首页](../../README.md#oneline)。手动安装时，把整个 `insurancehot` 文件夹放进 AI 工具的技能目录，并按首页“手动接入”添加 MCP 服务。
-
-这里是技能的唯一发布位置，网站上原来的技能地址会跳转到这里。机构清单随平台更新，最新版本可通过 `GET https://www.insurance-hot.com/api/v1/orgs` 获取（不需要 API Key）。
