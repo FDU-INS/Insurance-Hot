@@ -94,10 +94,10 @@ InsuranceHot 提供一个远程只读 MCP 服务（Streamable HTTP）和同样�
 **2. 把这句话发给你的 AI 工具**（把 Key 换成你自己的）：
 
 ```text
-我的 InsuranceHot API Key 是 ih_……。请阅读 https://www.insurance-hot.com/install，按说明为你自己接入 InsuranceHot，装好后回答：这周保险业有什么大事？请附上原文出处。
+我的 InsuranceHot API Key 是 ih_……。请按 https://www.insurance-hot.com/install 为你自己接入 InsuranceHot。
 ```
 
-适用于能读写本机文件的 AI 工具，例如 Claude Code、Codex、Cursor、WorkBuddy、DeepSeek Harness。它会按说明为自己装好技能和 Key（Claude Code、Codex、Cursor 同时配置 MCP），试调一次，再用 InsuranceHot 的数据回答这个问题。新开会话后即可直接使用。
+适用于能读写本机文件的 AI 工具，例如 Claude Code、Codex、Cursor、WorkBuddy、DeepSeek Harness。它会按说明为自己安装技能、保存 Key、添加 MCP，试调一次并报告结果，不需要 Node.js。过程中工具可能请你确认几次文件修改。完成后新开一个会话，就可以直接提问。
 
 ### 装好就能用
 

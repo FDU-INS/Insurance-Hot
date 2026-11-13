@@ -94,10 +94,10 @@ InsuranceHot offers a remote, read-only MCP server (Streamable HTTP) and a REST 
 **2. Send this sentence to your AI tool** (with your own key):
 
 ```text
-My InsuranceHot API key is ih_…. Please read https://www.insurance-hot.com/install and follow it to connect yourself to InsuranceHot, then answer: what were the big insurance stories this week? Please cite the original sources.
+My InsuranceHot API key is ih_…. Please follow https://www.insurance-hot.com/install to connect yourself to InsuranceHot.
 ```
 
-It works with AI tools that can read and write local files, such as Claude Code, Codex, Cursor, WorkBuddy and DeepSeek Harness. The tool follows the guide to install the skill and your key for itself (Claude Code, Codex and Cursor also get the MCP server), makes one test call, then answers the question with InsuranceHot data. From the next session on, just ask.
+It works with AI tools that can read and write local files, such as Claude Code, Codex, Cursor, WorkBuddy and DeepSeek Harness. The tool follows the guide to install the skill, save your key and add the MCP server, makes one test call and reports back; no Node.js needed. It may ask you to confirm a few file changes. Then start a new session and ask away.
 
 ### Ask in plain language
 
