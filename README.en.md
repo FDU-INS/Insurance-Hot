@@ -1,98 +1,279 @@
-[简体中文](README.md) · **English** · [![Hits](https://hits.sh/github.com/FDU-INS/Insurance-Hot.svg?style=flat-square&label=Hits&color=0969da)](https://hits.sh/github.com/FDU-INS/Insurance-Hot/)
-
 <p align="center">
-  <img src="docs/assets/readme/brand-lockup.svg" alt="InsuranceHot" width="408">
+  <img src="docs/assets/readme/brand-lockup.svg" alt="InsuranceHot" width="360">
 </p>
 
-<p align="center"><strong>Insurance news, from first report to follow-up.</strong></p>
-
-InsuranceHot is a news desk for insurance professionals, researchers, and industry readers. Browse regulatory announcements, company disclosures, and trade coverage in one place. Use live picks and trending events to decide what to follow, then turn to timelines, briefings, and original sources for the full story.
+<p align="center"><b>Global insurance news, for people to read and for AI to use.</b></p>
 
 <p align="center">
-  <strong>
-    <a href="#product-showcase">Product showcase</a> ·
-    <a href="#reader-guide">Reader guide</a> ·
-    <a href="#getting-started">Getting started</a>
-  </strong>
+  <a href="https://www.insurance-hot.com"><img src="https://img.shields.io/badge/Website-insurance--hot.com-0969da" alt="Website"></a>
+  <a href="#agent"><img src="https://img.shields.io/badge/MCP-Streamable%20HTTP-6f42c1" alt="MCP"></a>
+  <a href="https://www.insurance-hot.com/openapi-v1.json"><img src="https://img.shields.io/badge/REST_API-OpenAPI_3.1-2ea44f" alt="REST API"></a>
+  <a href="#rss"><img src="https://img.shields.io/badge/RSS-picks·daily·weekly·monthly-f26522" alt="RSS"></a>
+  <a href="https://github.com/FDU-INS/Insurance-Hot/stargazers"><img src="https://img.shields.io/github/stars/FDU-INS/Insurance-Hot?style=flat" alt="GitHub stars"></a>
+  <a href="https://hits.sh/github.com/FDU-INS/Insurance-Hot/"><img src="https://hits.sh/github.com/FDU-INS/Insurance-Hot.svg?style=flat&label=Hits&color=0969da" alt="Hits"></a>
 </p>
 
-## Promo video
+<p align="center"><a href="README.md">简体中文</a> · <b>English</b></p>
 
-https://github.com/user-attachments/assets/0bf97c5d-ccb3-43ff-9e3a-863bd908fbde
+<p align="center">
+  <a href="https://www.insurance-hot.com"><img src="docs/assets/readme/gif/01-要闻集合.gif" width="1000" alt="InsuranceHot screen recording: switching between picks and the full stream, filtering, reading why a story matters"></a>
+</p>
 
-## Product showcase
+<p align="center">
+  <a href="https://www.insurance-hot.com/featured?lang=en">Picks</a> ·
+  <a href="https://www.insurance-hot.com/hot?lang=en">Trending</a> ·
+  <a href="https://www.insurance-hot.com/daily?lang=en">Daily</a> ·
+  <a href="https://www.insurance-hot.com/topics?lang=en">Topics</a> ·
+  <a href="#agent">Connect an agent</a>
+</p>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/en/featured-dark.png">
-  <img src="docs/assets/readme/en/featured-light.png" alt="InsuranceHot Live picks with International selected, showing article summaries and links to original reports" width="100%">
-</picture>
+**InsuranceHot** is an insurance news platform published by Professor Xu Xian's team at Fudan University. It brings regulatory notices, company disclosures and industry reporting from many places together, then filters, classifies, analyses and groups them into an up-to-date, well-sourced picture of the industry. Insurance professionals read it on the website every day; AI agents can call it directly through MCP, a REST API and RSS.
 
-*Live picks shows recent international headlines alongside their sources. Captured on the running site on November 6, 2026.*
+This repository is InsuranceHot's official hub: agent setup instructions, the skill file, and an introduction to the platform.
 
-## Reader guide
+## Where to start
 
-### 01 · Catch up on the latest news
-
-On **Home**, choose **Today’s highlights**, or open **Latest news** from the navigation. The **Picks** tab covers the most important stories of the past 24 hours. Start with **Summary** and **Why it matters**, then open the reporting that interests you. Switch to **Latest** to browse collected articles by date. You can page through the feed or jump to a page. At the bottom of **Picks**, choose a date and time to review the preceding 24 hours.
-
-Choose **Official** for primary-source releases, or browse desks such as **Regulation & policy**, **Companies**, and **Market & data**. Switch between **China** and **International** according to the market the story covers.
-
-### 02 · Narrow the feed with search and directories
-
-Use the search box in the news feed. Choose time order to search titles and summaries, or relevance to include full text. Open **Advanced filters** to combine topics, organizations, regions, and insurance lines. For example, select **Regulation & policy**, then narrow the feed by organization or insurance line.
-
-In **Categories & topics**, browse directories for **Categories**, **Organizations**, **Topics**, and **Insurance lines**. Organization pages let you switch between all coverage and picks to see how a story fits into that organization's timeline.
-
-![International news search results with sort options and expanded filters](docs/assets/readme/en/timeline-search-light.png)
-
-### 03 · Follow trending events back to their sources
-
-Open **Trending** and switch between **China** and **International** to see ranked events, changes in activity, reporting sources, and 24-hour charts where available. To revisit a past ranking, select a date and hour, then choose **View**.
-
-Open an event to compare coverage in its background, developments, and reporting timeline. Change the timeline order or show official or featured reports only. Article pages show the publisher and original publication date, with the time the article was added listed separately. Use **Open original** to check the publisher's page. Automated summaries, explanations, and event overviews help you scan the coverage. Consult the original for anything you cite. Use the article’s action menu to copy its link or export it as Markdown.
-
-![International trending events with historical lookup, activity charts, and reporting sources](docs/assets/readme/en/hot-dark.png)
-
-[View an event detail screenshot](docs/assets/readme/en/story-dark.png)
-
-### 04 · Read the daily, weekly, and monthly editions
-
-Open **Insurance daily** for the **Rolling daily**, or select a finalized issue from the **Archive**. The daily separates China and international coverage and shows the reporting window, last update, and edition status. Follow any story to its reports and original sources.
-
-Use the **Weekly** and **Monthly** tabs to review a period's developments by section. The daily archive lets you find older issues by date.
-
-![International section of the rolling daily with top stories and links to original reports](docs/assets/readme/en/daily-light.png)
-
-### 05 · Save stories and make the site your own
-
-Select the bookmark icon next to a story, then find it under **Saved**. Guest bookmarks stay in the current browser and can be backed up or restored from a file. Sign in to sync bookmarks, read status, preferences, and follows across devices. You can also merge earlier bookmarks from the current browser into your account.
-
-Use **My account** to manage your account or change reading preferences. The site offers a Chinese and English interface, light and dark themes, and font options. Use **Feedback** to report a problem or request a source correction, with a screenshot if helpful.
+| You want to see | Start here |
+| --- | --- |
+| What happened in insurance today | [Picks](https://www.insurance-hot.com/featured?lang=en): the past 24 hours' important news, with summaries, why each matters and a link to the original |
+| What regulators have just done | [Official](https://www.insurance-hot.com/featured?lang=en): first-hand releases from regulators and industry associations in one place |
+| How a story has developed | [Trending](https://www.insurance-hot.com/hot?lang=en): China and international boards; open an event for its background, developments and report timeline |
+| A line of business, topic or company | [Topics](https://www.insurance-hot.com/topics?lang=en): browse by section, line, topic, region and organisation, e.g. Huiminbao or consumer protection |
+| One read a day or a week | [Daily](https://www.insurance-hot.com/daily?lang=en): a rolling daily, plus weekly and monthly reports |
+| Not to visit the site every day | [Email subscriptions](https://www.insurance-hot.com/agent/email?lang=en): combine sections, lines and topics, and receive a digest daily, weekly or monthly |
 
 <details>
-<summary>View a mobile article page</summary>
+<summary><b>Screen recordings of the six highlights</b></summary>
 
-<img src="docs/assets/readme/en/article-mobile-dark.png" alt="Mobile article page with the publisher, original date, summary, and original source link" width="320">
+### All the important insurance news in one place
+
+China and international, regulators, companies and markets: the industry's important developments on one platform.
+
+<img src="docs/assets/readme/gif/01-要闻集合.gif" width="1000" alt="Picks and the full stream">
+
+### A tag system built for the industry
+
+Sections, lines of business, topics, regions and organisations, designed around what different roles follow and the industry's core issues — from Huiminbao and annuities to consumer protection and solvency.
+
+<img src="docs/assets/readme/gif/02-标签体系.gif" width="1000" alt="Topics and the Huiminbao tag">
+
+### Official sources, tracked continuously
+
+Releases from regulators and industry associations are marked and shown together, each traceable to its original.
+
+<img src="docs/assets/readme/gif/03-官方信源.gif" width="1000" alt="Official releases">
+
+### Analysis and trending stories
+
+What matters and why; reports of the same event from many sources grouped into one storyline.
+
+<img src="docs/assets/readme/gif/04-分析与热点.gif" width="1000" alt="Trending board and event detail">
+
+### One step to connect AI tools
+
+Mainstream AI tools and in-house agents can connect, query insurance news directly and cite the original sources.
+
+<img src="docs/assets/readme/gif/05-AI工具接入.gif" width="1000" alt="MCP setup page">
+
+### Updates delivered to you
+
+Daily, weekly and monthly reports, and email subscriptions you configure yourself.
+
+<img src="docs/assets/readme/gif/06-智能推送.gif" width="1000" alt="Daily report and email subscriptions">
 
 </details>
 
-### 06 · Read InsuranceHot in your own tools
+<a id="agent"></a>
 
-In **Tool access**, choose the integration you need. **RSS feeds** bring picks, the full news feed, and daily, weekly, and monthly editions into a feed reader. **REST API** and **MCP** offer read-only access to news, events, and reports. All three require you to sign in and create an **API Key**.
+## Let your agent read the insurance industry
 
-**One-step setup** provides a prompt that a command-capable assistant can follow to configure MCP and Skill access and run a test query. The personal WeChat page walks you through connecting ClawBot. Sign in and scan the QR code to authorize news queries and scheduled picks in WeChat.
+InsuranceHot offers a remote, read-only MCP server (Streamable HTTP) and a REST API with the same content. Once connected, an agent can query the latest news, the background of a trending event, and the daily, weekly and monthly reports, citing the original sources in its answers.
 
-## Getting started
+### Step 1: create an API key
 
-### Read in a browser
+Sign in with your email on the website under [Tool access → API keys](https://www.insurance-hot.com/agent/keys) and create a key (free; up to 3 per person). Keys start with `ih_`.
 
-Open the site address supplied by your deployment operator. Go to **Latest news → Picks** for recent headlines, or open **Insurance daily** for the current issue. These reading views are available to guests. Sign in when you want to sync across devices.
+### Step 2: one-sentence setup
+
+With Claude Code, Codex or Cursor, send it the sentence below with your own key (for DeepSeek Harness, follow the manual setup further down):
+
+```text
+My InsuranceHot API key is ih_…. Please read https://www.insurance-hot.com/install, identify the client I am using, install InsuranceHot's read-only MCP and the insurancehot skill with this key, keep my existing configuration, make a test call for the latest news and check the original source links it returns, then tell me the actual result.
+```
+
+It identifies your client, installs the MCP server and the skill, makes one test call and reports back. Existing configuration is kept and changed files are backed up. You can also install manually as described under "Client setup".
+
+### Ask in plain language
+
+No need to remember tool names:
+
+| You can ask | What the agent does |
+| --- | --- |
+| What were the big insurance stories this week? Please cite the sources. | Reads this week's news and the trending board and lists the main points, each with source, date and original link |
+| What is number one on the trending board, and how did it develop? | Reads the China trending board, then lays out the event's reports and developments as a timeline |
+| What has Ping An done in the past week? | Queries everything about the organisation in the last 7 days, separating group, life and P&C |
+| Any regulatory news on Huiminbao recently? | Filters by line of business and section, and says which items are regulations and which are industry reference texts |
+| Give me today's briefing for a compliance team | Summarises the day's regulatory, enforcement and licensing items with suggested follow-ups |
+
+> **Install the skill as well.** The skill file [`insurancehot/SKILL.md`](https://www.insurance-hot.com/skills/insurancehot/SKILL.md) tells the agent how to answer these questions with as few calls as possible. In our tests, agents with the skill typically made 2–4 calls per question; without it they could use 9–12. Each account has 20 calls a day.
+
+### Real examples
+
+Excerpts of real answers from three clients on 2026-11-13 (the service answers in Chinese; content changes over time, so check the originals before quoting).
+
+**Claude Code** · "What is number one on China's insurance trending board now, and how did it develop?" → `insurancehot_event` (board=中国) + `insurancehot_event` (id=…), 2 calls
+
+```text
+截至北京时间 2026-11-13 13:05，中国保险热点榜第一是“中国精算师协会发布商业健康保险药品保障成本表”。
+这个事件在站内收了 63 篇报道，来自 12 家信源。
+
+11 月 10 日，三家机构接连发布了一组商业健康险文件：
+- 中国保险行业协会发布三份医疗险示范条款（短期、长期、城市定制型即惠民保），
+  统一了“合理且必要”等 24 个常用概念的释义，首次把调解介入写进争议处理；
+- 同时发布《商业健康保险药品保障推荐清单（第一版）》，收录 58 款药械，其中医保目录外自费药 32 款；
+- 中国精算师协会发布行业第一份商业健康保险药品保障成本表，涉及 117 个药品。
+以上文件都是示范性参考，没有强制性。
+（共 17 条报道时间线，每条附原文链接）
+```
+
+**Codex** · "Any regulatory news on Huiminbao recently? Please cite the sources." → `insurancehot_news` (line=惠民保) + `insurancehot_news` (q=惠民保, column=监管政策), 2 calls
+
+```text
+截至 2026年11月13日12:55（北京时间），我在 InsuranceHot 近7天收录的“惠民保”监管政策中
+没有查到新的监管部门文件。最近最相关的规范动态是：
+
+- 11月10日，中国保险行业协会发布《城市定制型商业医疗保险示范条款》……供行业参考，不具有强制性。
+  这是行业协会的示范文本，不宜称为监管新规。[中国银行保险报，11月12日原文](https://www.cbimc.cn/news/336928)
+
+查询范围是近7天的公开收录资料；未查到不等于这段时间没有其他地方性监管动态。
+```
+
+**DeepSeek Harness** · "What were the big insurance stories this week? List 5, each with source, date and original link." → `insurancehot_report`, `insurancehot_event`, `insurancehot_news`
+
+```text
+这周（11-06 ~ 11-13）保险业五件大事
+1. 商业健康险“新基础设施”同日发布：三套医疗险示范条款和商保药品清单、成本表
+2. 国务院专题学习定调多层次社会保障体系：明确“支持商业健康保险发展壮大”
+3. 金融监管总局就保险公司董监高任职资格管理办法征求意见：条文增至66条、负面清单扩至18项
+4. 保险科技股白鸽在线两日暴跌约75%，市值蒸发逾350亿港元
+5. 安联前三季度经营利润141亿欧元创同期纪录，全年目标上限上调至约186亿欧元
+（每条附来源、日期和原文链接）
+```
+
+### MCP tools
+
+Server: `https://www.insurance-hot.com/api/mcp` (Streamable HTTP). Pass the key in an `X-API-Key` header or an `?api_key=` parameter.
+
+| Tool | Purpose | Main parameters |
+| --- | --- | --- |
+| `insurancehot_news` | News from the last 1–7 days; with `id`, one story and its event | `q` keyword, `column` section, `line` line of business, `topic`, `region`, `org` organisation, `days`, `since`, `scope` (精选 picks / 全部 all), `limit` (≤20) |
+| `insurancehot_event` | Without `id`, the current top 10 trending events; with `id`, an event's background and timeline | `board` (中国 China / 国际 international / 全部 all), `id`, `limit` |
+| `insurancehot_report` | Daily, weekly and monthly reports | `kind` (日报 / 周报 / 月报), `period` (e.g. 2026-11-04, 2026-W44, 2026-10, or latest) |
+
+Parameter values are Chinese, as listed in the [skill file](https://www.insurance-hot.com/skills/insurancehot/SKILL.md).
+
+### Client setup (all tested)
+
+Replace `ih_你的APIKey` with your own key in the commands below. Download the skill from [`SKILL.md`](https://www.insurance-hot.com/skills/insurancehot/SKILL.md).
+
+**Claude Code** (the CLI and Code sessions in the Claude desktop app)
+
+```bash
+claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey' -s user
+```
+
+`-s user` makes it available in every project and in new desktop sessions; drop it to use it in the current project only. Put the skill at `~/.claude/skills/insurancehot/SKILL.md`. It takes effect in a new session; `claude mcp list` shows `✔ Connected` when the server is reachable.
+
+**Codex** (the Codex CLI and Codex in the ChatGPT desktop app share one configuration)
+
+```bash
+codex mcp add insurancehot --url 'https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey'
+```
+
+Put the skill at `~/.agents/skills/insurancehot/SKILL.md`. `codex mcp list` shows `insurancehot` as `enabled` once it is added.
+
+**DeepSeek Harness**
+
+Create a patch file, for example `~/.dsh/insurancehot.yml`:
+
+```yaml
+# InsuranceHot read-only MCP; the API key is read from the INSURANCEHOT_API_KEY environment variable
+- insert:
+    - id: mcp-insurancehot
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: insurancehot
+        transport: streamable-http
+        url: https://www.insurance-hot.com/api/mcp
+        headers:
+          X-API-Key: !!js process.env.INSURANCEHOT_API_KEY
+```
+
+Start with the patch, for example to ask one question:
+
+```bash
+export INSURANCEHOT_API_KEY=ih_你的APIKey
+dsh --profile headless --patch ~/.dsh/insurancehot.yml "What were the big insurance stories this week? Please cite the sources."
+```
+
+Other profiles (such as `web`) load it the same way with `--patch ~/.dsh/insurancehot.yml`. To keep it on, add the `insert` block to the profile's patch layer `~/.dsh/profiles/<profile>/cordis.patch.yml`. Put the skill at `~/.agents/skills/insurancehot/SKILL.md` (shared with Codex). The tools appear in DeepSeek Harness as `mcp__insurancehot__insurancehot_news` and so on.
+
+**Other clients**: any client that supports MCP over Streamable HTTP can add `https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey`; clients that support skills can add `SKILL.md` too.
+
+**Health check**: one command confirms your key and the API work; it returns the current China trending board (counts towards the daily allowance):
+
+```bash
+curl -s 'https://www.insurance-hot.com/api/v1/events?board=%E4%B8%AD%E5%9B%BD' -H 'X-API-Key: ih_你的APIKey'
+```
+
+### REST API
+
+The same JSON as MCP, under `/api/v1`; see the [OpenAPI specification](https://www.insurance-hot.com/openapi-v1.json).
+
+| Purpose | Endpoint |
+| --- | --- |
+| News | `GET /api/v1/news?…`, `GET /api/v1/news/{id}` |
+| Trending board, events | `GET /api/v1/events?board=中国`, `GET /api/v1/events/{id}` |
+| Reports | `GET /api/v1/reports/{日报\|周报\|月报}/{period\|latest}` |
+
+<a id="rss"></a>
+
+### RSS
+
+| Feed | URL |
+| --- | --- |
+| Picks (recommended) | `https://www.insurance-hot.com/feed.xml` |
+| All news | `https://www.insurance-hot.com/feed/all.xml` |
+| Daily / weekly / monthly | `https://www.insurance-hot.com/feed/daily.xml` · `weekly.xml` · `monthly.xml` |
+
+News feeds accept the same filters as the news API, e.g. `/feed.xml?line=车险&region=中国`. RSS also needs an API key, with its own allowance.
+
+### Before you start
+
+| | |
+| --- | --- |
+| **API key** | Free; sign in with your email on the website to create one. Required for every API and RSS feed |
+| **Allowance** | 20 calls a day per account (MCP and REST combined; RSS counted separately), reset at midnight Beijing time; over the limit returns 429 |
+| **Read-only** | The API only reads; it gives no buying advice or quotes |
+| **Coverage** | News from the last 1–7 days; the current top 10 trending events; daily, weekly and monthly reports by period |
+| **Safety** | Titles and summaries come from external sources; the skill tells the agent to treat them as material, never as instructions. Check important facts against the original |
+| **Compatibility** | Any client supporting MCP over Streamable HTTP; full details in [llms.txt](https://www.insurance-hot.com/llms.txt) |
+
+## Feedback
+
+Summaries and analysis are AI-assisted; quote the original sources. For problems or source corrections, use [Feedback](https://www.insurance-hot.com/feedback) on the website.
+
+If you find it useful, a **Star** helps you find your way back.
 
 ## Star history
 
 <a href="https://www.star-history.com/?repos=FDU-INS%2FInsurance-Hot&amp;type=date">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=fdu-ins/insurance-hot&amp;type=date&amp;theme=dark">
-    <img src="https://api.star-history.com/chart?repos=fdu-ins/insurance-hot&amp;type=date" alt="GitHub Star history chart">
+    <img src="https://api.star-history.com/chart?repos=fdu-ins/insurance-hot&amp;type=date" alt="GitHub star history">
   </picture>
 </a>
+
+---
+
+<p align="center"><sub>Fudan Insurance Team ｜ 苏ICP备2021024924号-8</sub></p>
