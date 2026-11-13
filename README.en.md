@@ -97,7 +97,7 @@ InsuranceHot offers a remote, read-only MCP server (Streamable HTTP) and a REST 
 My InsuranceHot API key is ih_…. Please follow https://www.insurance-hot.com/install to connect yourself to InsuranceHot.
 ```
 
-It works with AI tools that can read and write local files, such as Claude Code, Codex, Cursor, WorkBuddy and DeepSeek Harness. The tool follows the guide to install the skill, save your key and add the MCP server, makes one test call and reports back; no Node.js needed. It may ask you to confirm a few file changes. Then start a new session and ask away.
+It works with AI tools that can read and write local files, such as Claude Code, Codex, Cursor, WorkBuddy and DeepSeek Harness. The tool follows the guide to install the skill, save your key and add the MCP server, makes one test call and reports back; no Node.js needed. Your AI tool may ask you to approve some actions, such as writing files or changing its settings; allow them when asked. Then start a new session and ask away.
 
 ### Ask in plain language
 
