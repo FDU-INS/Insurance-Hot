@@ -97,7 +97,7 @@ InsuranceHot 提供一个远程只读 MCP 服务（Streamable HTTP）和同样�
 我的 InsuranceHot API Key 是 ih_……。请按 https://www.insurance-hot.com/install 为你自己接入 InsuranceHot。
 ```
 
-适用于能读写本机文件的 AI 工具，例如 Claude Code、Codex、Cursor、WorkBuddy、DeepSeek Harness。它会按说明为自己安装技能、保存 Key、添加 MCP，试调一次并报告结果，不需要 Node.js。过程中 AI 工具可能会请你确认授权（例如写入文件、修改配置），按提示允许即可。完成后新开一个会话，就可以直接提问。
+适用于能读写本机文件的 AI 工具，例如 Codex、DeepSeek Harness、WorkBuddy、Cursor、Claude Code。它会按说明为自己安装技能、保存 Key、添加 MCP，试调一次并报告结果，不需要 Node.js。过程中 AI 工具可能会请你确认授权（例如写入文件、修改配置），按提示允许即可。完成后新开一个会话，就可以直接提问。
 
 ### 装好就能用
 
@@ -178,12 +178,6 @@ InsuranceHot 提供一个远程只读 MCP 服务（Streamable HTTP）和同样�
 
 <br>
 
-**Claude Code**（技能目录 `~/.claude/skills/`）
-
-```bash
-claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey' -s user
-```
-
 **Codex**（技能目录 `~/.agents/skills/`）
 
 ```bash
@@ -200,6 +194,25 @@ codex mcp add insurancehot --url 'https://www.insurance-hot.com/api/mcp?api_key=
         serverName: insurancehot
         transport: streamable-http
         url: https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey
+```
+
+**WorkBuddy**（技能目录 `~/.workbuddy/skills/`）：在“MCP 服务管理 → 配置 MCP”中加入下面的内容（即 `~/.workbuddy/mcp.json`）。
+
+```json
+{
+  "mcpServers": {
+    "insurancehot": {
+      "type": "http",
+      "url": "https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey"
+    }
+  }
+}
+```
+
+**Claude Code**（技能目录 `~/.claude/skills/`）
+
+```bash
+claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey' -s user
 ```
 
 </details>

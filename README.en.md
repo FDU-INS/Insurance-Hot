@@ -97,7 +97,7 @@ InsuranceHot offers a remote, read-only MCP server (Streamable HTTP) and a REST 
 My InsuranceHot API key is ih_…. Please follow https://www.insurance-hot.com/install to connect yourself to InsuranceHot.
 ```
 
-It works with AI tools that can read and write local files, such as Claude Code, Codex, Cursor, WorkBuddy and DeepSeek Harness. The tool follows the guide to install the skill, save your key and add the MCP server, makes one test call and reports back; no Node.js needed. Your AI tool may ask you to approve some actions, such as writing files or changing its settings; allow them when asked. Then start a new session and ask away.
+It works with AI tools that can read and write local files, such as Codex, DeepSeek Harness, WorkBuddy, Cursor and Claude Code. The tool follows the guide to install the skill, save your key and add the MCP server, makes one test call and reports back; no Node.js needed. Your AI tool may ask you to approve some actions, such as writing files or changing its settings; allow them when asked. Then start a new session and ask away.
 
 ### Ask in plain language
 
@@ -166,12 +166,6 @@ If you prefer not to use the one-sentence setup, configure two things yourself:
 
 <br>
 
-**Claude Code** (skills directory `~/.claude/skills/`)
-
-```bash
-claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/mcp?api_key=ih_YOUR_KEY' -s user
-```
-
 **Codex** (skills directory `~/.agents/skills/`)
 
 ```bash
@@ -188,6 +182,25 @@ codex mcp add insurancehot --url 'https://www.insurance-hot.com/api/mcp?api_key=
         serverName: insurancehot
         transport: streamable-http
         url: https://www.insurance-hot.com/api/mcp?api_key=ih_YOUR_KEY
+```
+
+**WorkBuddy** (skills directory `~/.workbuddy/skills/`): add the following under MCP management → Configure MCP (that is, `~/.workbuddy/mcp.json`).
+
+```json
+{
+  "mcpServers": {
+    "insurancehot": {
+      "type": "http",
+      "url": "https://www.insurance-hot.com/api/mcp?api_key=ih_YOUR_KEY"
+    }
+  }
+}
+```
+
+**Claude Code** (skills directory `~/.claude/skills/`)
+
+```bash
+claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/mcp?api_key=ih_YOUR_KEY' -s user
 ```
 
 </details>
