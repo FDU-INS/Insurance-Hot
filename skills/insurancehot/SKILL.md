@@ -7,6 +7,21 @@ description: 用 InsuranceHot 的实时公开资料回答保险业大事、公�
 
 站点：https://www.insurance-hot.com。只用站点实际返回的新闻、事件和报告回答。
 
+## 技能包文件
+
+本技能发布在 GitHub：https://github.com/FDU-INS/Insurance-Hot/tree/main/skills/insurancehot 。完整的技能包有三个文件，安装时一起下载，保持下面的目录结构：
+
+```text
+insurancehot/
+├── SKILL.md              本文件
+├── references/
+│   └── orgs.md           机构清单（https://raw.githubusercontent.com/FDU-INS/Insurance-Hot/main/skills/insurancehot/references/orgs.md）
+└── agents/
+    └── openai.yaml       Codex 等客户端的技能元数据（https://raw.githubusercontent.com/FDU-INS/Insurance-Hot/main/skills/insurancehot/agents/openai.yaml）
+```
+
+只拿到本文件时，把另外两个文件按上面的地址补齐。
+
 ## 连接
 
 优先使用已连接的 `insurancehot` MCP 服务，它有三个工具：
