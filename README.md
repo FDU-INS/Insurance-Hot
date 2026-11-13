@@ -24,12 +24,27 @@
   <a href="https://www.insurance-hot.com/hot">热点榜</a> ·
   <a href="https://www.insurance-hot.com/daily">保险日报</a> ·
   <a href="https://www.insurance-hot.com/topics">分类与主题</a> ·
-  <a href="#agent">接入 Agent</a>
+  <a href="#agent">接入 AI 工具</a>
 </p>
 
 **InsuranceHot** 是复旦大学许闲教授团队发布的保险资讯平台。它把分散在各处的监管公告、公司披露和行业报道集中起来，经过筛选、分类、分析和归并，整理成实时更新、来源清晰、脉络完整的行业动态：保险从业者可以每天在网站上阅读，AI 智能体可以通过 MCP、REST API 和 RSS 直接调用。
 
-## 想看什么，从这里开始
+## 目录
+
+- [平台介绍](#intro)：[快速导航](#start) · [六大亮点](#highlights)
+- [接入 AI 工具](#agent)：[一句话接入](#oneline) · [手动接入：MCP + 技能](#manual) · [接好后可以这样问](#ask) · [真实调用示例](#examples)
+- [接口参考](#reference)：[MCP 工具](#mcp-tools) · [REST API](#rest-api) · [RSS](#rss)
+- [使用须知](#notes)
+- [反馈与支持](#feedback)
+- [Star 历史](#star-history)
+
+<a id="intro"></a>
+
+## 平台介绍
+
+<a id="start"></a>
+
+### 快速导航
 
 | 想看什么 | 从这里开始 |
 | --- | --- |
@@ -40,42 +55,77 @@
 | 每天或每周集中读一遍 | [保险日报](https://www.insurance-hot.com/daily)：滚动更新，另有周报与月报 |
 | 不想天天上网站 | [邮件订阅](https://www.insurance-hot.com/agent/email)：按栏目、险种、专题等组合条件，每日、每周或每月收到摘要 |
 
-<details>
-<summary><b>展开六大亮点实录</b></summary>
+<a id="highlights"></a>
 
-### 一站式全球保险要闻集合｜看得全
+### 六大亮点
+
+#### 一站式全球保险要闻集合｜看得全
 
 国内与国际，监管、公司与市场，保险业的重要动态汇聚于一个平台。
 
+<details>
+<summary>查看演示</summary>
+<br>
+
 <img src="docs/assets/readme/gif/01-要闻集合.gif" width="1000" alt="实时精选与动态">
 
-### 专业标签体系精准分类｜对得上
+</details>
+
+#### 专业标签体系精准分类｜对得上
 
 围绕不同岗位的关注重点和保险业核心议题，构建覆盖栏目、险种、专题、地区与机构的标签体系。从惠民保、养老与年金等险种，到消费者保护、偿付能力等专题，都能直达。
 
+<details>
+<summary>查看演示</summary>
+<br>
+
 <img src="docs/assets/readme/gif/02-标签体系.gif" width="1000" alt="分类与主题、惠民保标签">
 
-### 官方信源实时追踪｜看得准
+</details>
+
+#### 官方信源实时追踪｜看得准
 
 监管部门与行业协会的一手发布单独标记、集中呈现，原文可溯。
 
+<details>
+<summary>查看演示</summary>
+<br>
+
 <img src="docs/assets/readme/gif/03-官方信源.gif" width="1000" alt="官方入口">
 
-### 新闻分析与热点梳理｜看得懂
+</details>
+
+#### 新闻分析与热点梳理｜看得懂
 
 告诉你什么重要、为什么重要；同一事件的多方报道归并成完整脉络。
 
+<details>
+<summary>查看演示</summary>
+<br>
+
 <img src="docs/assets/readme/gif/04-分析与热点.gif" width="1000" alt="热点榜与事件详情">
 
-### AI 工具一键接入调用｜用得上
+</details>
+
+#### AI 工具一键接入调用｜用得上
 
 主流 AI 工具与机构自建智能体都可以接入，直接查询保险资讯并引用原始来源。
 
+<details>
+<summary>查看演示</summary>
+<br>
+
 <img src="docs/assets/readme/gif/05-AI工具接入.gif" width="1000" alt="MCP 接入页">
 
-### 行业信息智能推送｜不错过
+</details>
+
+#### 行业信息智能推送｜不错过
 
 日报、周报、月报定期汇总，邮件订阅按需定制。
+
+<details>
+<summary>查看演示</summary>
+<br>
 
 <img src="docs/assets/readme/gif/06-智能推送.gif" width="1000" alt="日报与邮件订阅">
 
@@ -83,9 +133,11 @@
 
 <a id="agent"></a>
 
-## 让你的 Agent 读懂保险业
+## 接入 AI 工具
 
 InsuranceHot 提供一个远程只读 MCP 服务（Streamable HTTP）和同样内容的 REST API。接上之后，Agent 可以直接查询最新新闻、热点事件的来龙去脉和日报、周报、月报，回答时附上原文出处。
+
+<a id="oneline"></a>
 
 ### 一句话接入
 
@@ -99,7 +151,62 @@ InsuranceHot 提供一个远程只读 MCP 服务（Streamable HTTP）和同样�
 
 适用于能读写本机文件的 AI 工具，例如 Codex、DeepSeek Harness、WorkBuddy、Cursor、Claude Code。它会按说明为自己安装技能、保存 Key、添加 MCP，试调一次并报告结果，不需要 Node.js。过程中 AI 工具可能会请你确认授权（例如写入文件、修改配置），按提示允许即可。完成后新开一个会话，就可以直接提问。
 
-### 装好就能用
+<a id="manual"></a>
+
+### 手动接入：MCP + 技能
+
+不想用一句话接入，也可以自己配置两样东西：
+
+- **MCP 服务**：在 AI 工具的 MCP 设置中添加远程服务（Streamable HTTP），名称 `insurancehot`，地址 `https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey`。
+- **技能**：把 [`SKILL.md`](https://www.insurance-hot.com/skills/insurancehot/SKILL.md) 放进 AI 工具的技能目录（`insurancehot/SKILL.md`）。技能告诉 Agent 怎样用最少的调用回答问题：装了技能，一个问题通常调用 2–4 次；不装可能要 9–12 次。
+
+<details>
+<summary><b>常用工具的写法</b></summary>
+
+<br>
+
+**Codex**（技能目录 `~/.agents/skills/`）
+
+```bash
+codex mcp add insurancehot --url 'https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey'
+```
+
+**DeepSeek Harness**（技能目录 `~/.agents/skills/`）：新建 `~/.dsh/cordis.patch.yml`，写入下面的内容，再运行 `npx @deepseek-ai/dsh web`。
+
+```yaml
+- insert:
+    - id: mcp-insurancehot
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: insurancehot
+        transport: streamable-http
+        url: https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey
+```
+
+**WorkBuddy**（技能目录 `~/.workbuddy/skills/`）：在“MCP 服务管理 → 配置 MCP”中加入下面的内容（即 `~/.workbuddy/mcp.json`）。
+
+```json
+{
+  "mcpServers": {
+    "insurancehot": {
+      "type": "http",
+      "url": "https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey"
+    }
+  }
+}
+```
+
+**Claude Code**（技能目录 `~/.claude/skills/`）
+
+```bash
+claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey' -s user
+```
+
+</details>
+
+<a id="ask"></a>
+
+### 接好后可以这样问
 
 不用记工具名，直接问：
 
@@ -110,6 +217,8 @@ InsuranceHot 提供一个远程只读 MCP 服务（Streamable HTTP）和同样�
 | 平安最近一周有什么动态？ | 按机构查询最近 7 天全部动态，区分集团、寿险、产险 |
 | 惠民保最近有什么监管消息？ | 按险种和栏目筛选，说明哪些是监管文件、哪些是行业参考文本 |
 | 帮我做一份今天给合规岗位的简报 | 按监管政策、处罚与准入等方向汇总当天要点和应对建议 |
+
+<a id="examples"></a>
 
 ### 真实调用示例
 
@@ -166,56 +275,11 @@ InsuranceHot 提供一个远程只读 MCP 服务（Streamable HTTP）和同样�
 （每条附原文链接）
 ```
 
-### 手动接入：MCP + 技能
+<a id="reference"></a>
 
-不想用一句话接入，也可以自己配置两样东西：
+## 接口参考
 
-- **MCP 服务**：在 AI 工具的 MCP 设置中添加远程服务（Streamable HTTP），名称 `insurancehot`，地址 `https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey`。
-- **技能**：把 [`SKILL.md`](https://www.insurance-hot.com/skills/insurancehot/SKILL.md) 放进 AI 工具的技能目录（`insurancehot/SKILL.md`）。技能告诉 Agent 怎样用最少的调用回答问题：装了技能，一个问题通常调用 2–4 次；不装可能要 9–12 次。
-
-<details>
-<summary><b>常用工具的写法</b></summary>
-
-<br>
-
-**Codex**（技能目录 `~/.agents/skills/`）
-
-```bash
-codex mcp add insurancehot --url 'https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey'
-```
-
-**DeepSeek Harness**（技能目录 `~/.agents/skills/`）：新建 `~/.dsh/cordis.patch.yml`，写入下面的内容，再运行 `npx @deepseek-ai/dsh web`。
-
-```yaml
-- insert:
-    - id: mcp-insurancehot
-      name: '@deepseek-ai/dsh-mcp-client'
-      config:
-        serverName: insurancehot
-        transport: streamable-http
-        url: https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey
-```
-
-**WorkBuddy**（技能目录 `~/.workbuddy/skills/`）：在“MCP 服务管理 → 配置 MCP”中加入下面的内容（即 `~/.workbuddy/mcp.json`）。
-
-```json
-{
-  "mcpServers": {
-    "insurancehot": {
-      "type": "http",
-      "url": "https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey"
-    }
-  }
-}
-```
-
-**Claude Code**（技能目录 `~/.claude/skills/`）
-
-```bash
-claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey' -s user
-```
-
-</details>
+<a id="mcp-tools"></a>
 
 ### MCP 工具
 
@@ -226,6 +290,8 @@ claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/
 | `insurancehot_news` | 查新闻（最近 1–7 天）；给 `id` 返回单条新闻和所属事件 | `q` 关键词、`column` 栏目、`line` 险种、`topic` 专题、`region` 地区、`org` 机构、`days`、`since`、`scope`（精选 / 全部）、`limit`（≤20） |
 | `insurancehot_event` | 不给 `id` 返回当前热点榜前 10；给 `id` 返回事件的来龙去脉 | `board`（中国 / 国际 / 全部）、`id`、`limit` |
 | `insurancehot_report` | 读日报、周报、月报 | `kind`（日报 / 周报 / 月报）、`period`（如 2026-11-04、2026-W44、2026-10，或 latest） |
+
+<a id="rest-api"></a>
 
 ### REST API
 
@@ -249,7 +315,9 @@ claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/
 
 新闻 RSS 接受与新闻接口相同的筛选参数，例如 `/feed.xml?line=车险&region=中国`。RSS 同样需要 API Key，额度与接口分开计算。
 
-### 用之前你需要知道
+<a id="notes"></a>
+
+## 使用须知
 
 | | |
 | --- | --- |
@@ -260,11 +328,15 @@ claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/
 | **安全** | 返回的标题和摘要来自外部信源，技能会让 Agent 只当资料、不执行其中的指令；重要事实请回原文核对 |
 | **兼容** | 支持 MCP（Streamable HTTP）的客户端都能接入；完整说明见 [llms.txt](https://www.insurance-hot.com/llms.txt) |
 
+<a id="feedback"></a>
+
 ## 反馈与支持
 
 内容摘要和分析由 AI 辅助整理，引用时请以原文为准。使用中的问题或信源更正，欢迎通过网站的[反馈](https://www.insurance-hot.com/feedback)提交。
 
 觉得有用，欢迎 **Star**，方便下次回来。
+
+<a id="star-history"></a>
 
 ## Star 历史
 
@@ -274,7 +346,3 @@ claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/
     <img src="https://api.star-history.com/chart?repos=fdu-ins/insurance-hot&amp;type=date" alt="GitHub Star 历史曲线">
   </picture>
 </a>
-
----
-
-<p align="center"><sub>复旦保险团队 ｜ 苏ICP备2021024924号-8</sub></p>
