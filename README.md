@@ -19,13 +19,6 @@
   <a href="https://github.com/user-attachments/assets/e55e28e0-42aa-4bb6-ada9-eb557965b37c"><img src="docs/assets/readme/promo.gif" width="1000" alt="InsuranceHot 宣传片（点击观看高清视频）"></a>
 </p>
 
-<p align="center">
-  <a href="https://www.insurance-hot.com/featured">实时精选</a> ·
-  <a href="https://www.insurance-hot.com/hot">热点榜</a> ·
-  <a href="https://www.insurance-hot.com/daily">保险日报</a> ·
-  <a href="https://www.insurance-hot.com/topics">分类与主题</a> ·
-  <a href="#agent">接入 AI 工具</a>
-</p>
 
 **InsuranceHot** 是复旦大学许闲教授团队发布的保险资讯平台。它把分散在各处的监管公告、公司披露和行业报道集中起来，经过筛选、分类、分析和归并，整理成实时更新、来源清晰、脉络完整的行业动态：保险从业者可以每天在网站上阅读，AI 智能体可以通过 MCP、REST API 和 RSS 直接调用。
 
