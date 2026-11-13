@@ -322,7 +322,6 @@ claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/
 ## 使用须知
 
 | | |
-| --- | --- |
 | **API Key** | 免费，用邮箱登录后在网站新建；所有接口和 RSS 都需要 |
 | **额度** | 每个账号每天 100 次（MCP 与 REST 合计，RSS 另计）；同一 IP 每天合计也不超过 500 次（所有账号和 Key 合计）；北京时间 0 点重置，超出返回 429 |
 | **只读** | 接口只读不写；不提供投保建议或报价 |
