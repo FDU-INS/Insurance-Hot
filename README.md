@@ -31,9 +31,18 @@
 
 ## 目录
 
-- [平台介绍](#intro)：[快速导航](#start) · [六大亮点](#highlights)
-- [接入 AI 工具](#agent)：[一句话接入](#oneline) · [手动接入：MCP + 技能](#manual) · [接好后可以这样问](#ask) · [真实调用示例](#examples)
-- [接口参考](#reference)：[MCP 工具](#mcp-tools) · [REST API](#rest-api) · [RSS](#rss)
+- [平台介绍](#intro)
+  - [快速导航](#start)
+  - [六大亮点](#highlights)
+- [接入 AI 工具](#agent)
+  - [一句话接入](#oneline)
+  - [手动接入：MCP + 技能](#manual)
+  - [接好后可以这样问](#ask)
+  - [真实调用示例](#examples)
+- [接口参考](#reference)
+  - [MCP 工具](#mcp-tools)
+  - [REST API](#rest-api)
+  - [RSS](#rss)
 - [使用须知](#notes)
 - [反馈与支持](#feedback)
 - [Star 历史](#star-history)

@@ -31,9 +31,18 @@
 
 ## Contents
 
-- [About the platform](#intro): [Where to start](#start) · [Six highlights](#highlights)
-- [Connect AI tools](#agent): [One-sentence setup](#oneline) · [Manual setup: MCP + skill](#manual) · [Then just ask](#ask) · [Real examples](#examples)
-- [Reference](#reference): [MCP tools](#mcp-tools) · [REST API](#rest-api) · [RSS](#rss)
+- [About the platform](#intro)
+  - [Where to start](#start)
+  - [Six highlights](#highlights)
+- [Connect AI tools](#agent)
+  - [One-sentence setup](#oneline)
+  - [Manual setup: MCP + skill](#manual)
+  - [Then just ask](#ask)
+  - [Real examples](#examples)
+- [Reference](#reference)
+  - [MCP tools](#mcp-tools)
+  - [REST API](#rest-api)
+  - [RSS](#rss)
 - [Before you start](#notes)
 - [Feedback](#feedback)
 - [Star history](#star-history)
