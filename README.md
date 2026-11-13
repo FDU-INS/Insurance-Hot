@@ -8,7 +8,7 @@
   <a href="https://www.insurance-hot.com"><img src="https://img.shields.io/badge/Website-insurance--hot.com-0969da" alt="Website"></a>
   <a href="#agent"><img src="https://img.shields.io/badge/MCP-Streamable%20HTTP-6f42c1" alt="MCP"></a>
   <a href="https://www.insurance-hot.com/openapi-v1.json"><img src="https://img.shields.io/badge/REST_API-OpenAPI_3.1-2ea44f" alt="REST API"></a>
-  <a href="#rss"><img src="https://img.shields.io/badge/RSS-精选·日报·周报·月报-f26522" alt="RSS"></a>
+  <a href="#rss"><img src="https://img.shields.io/badge/RSS-精选·热点·日报·周报·月报-f26522" alt="RSS"></a>
   <a href="https://github.com/FDU-INS/Insurance-Hot/stargazers"><img src="https://img.shields.io/github/stars/FDU-INS/Insurance-Hot?style=flat" alt="GitHub stars"></a>
   <a href="https://hits.sh/github.com/FDU-INS/Insurance-Hot/"><img src="https://hits.sh/github.com/FDU-INS/Insurance-Hot.svg?style=flat&label=Hits&color=0969da" alt="Hits"></a>
 </p>
