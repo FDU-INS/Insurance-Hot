@@ -310,13 +310,13 @@ claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/
 
 ### RSS
 
-| 订阅源 | 地址 |
-| --- | --- |
-| 精选（推荐） | `https://www.insurance-hot.com/feed.xml` |
-| 全部动态 | `https://www.insurance-hot.com/feed/all.xml` |
-| 日报 / 周报 / 月报 | `https://www.insurance-hot.com/feed/daily.xml` · `weekly.xml` · `monthly.xml` |
+| 订阅源 | 地址 | 内容 |
+| --- | --- | --- |
+| 精选（推荐） | `https://www.insurance-hot.com/feed.xml` | 最近 24 小时的精选，最多 20 条 |
+| 热点事件 | `https://www.insurance-hot.com/feed/hot.xml` | 当前热点榜前 10 个事件；加 `?board=国际` 或 `全部` 换榜 |
+| 日报 / 周报 / 月报 | `https://www.insurance-hot.com/feed/daily.xml` · `weekly.xml` · `monthly.xml` | 各保留最近 5 期 |
 
-新闻 RSS 接受与新闻接口相同的筛选参数，例如 `/feed.xml?line=车险&region=中国`。RSS 同样需要 API Key，额度与接口分开计算。
+精选 RSS 接受与新闻接口相同的筛选参数，例如 `/feed.xml?line=车险&region=中国`、`/feed.xml?org=中国人寿,国寿财险`。RSS 同样需要 API Key（地址后加 `?api_key=`），每个账号每天 100 次，与接口额度分开计算。
 
 <a id="notes"></a>
 

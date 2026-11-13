@@ -300,13 +300,13 @@ The same JSON as MCP, under `/api/v1`; see the [OpenAPI specification](https://w
 
 ### RSS
 
-| Feed | URL |
-| --- | --- |
-| Picks (recommended) | `https://www.insurance-hot.com/feed.xml` |
-| All news | `https://www.insurance-hot.com/feed/all.xml` |
-| Daily / weekly / monthly | `https://www.insurance-hot.com/feed/daily.xml` · `weekly.xml` · `monthly.xml` |
+| Feed | URL | Contents |
+| --- | --- | --- |
+| Picks (recommended) | `https://www.insurance-hot.com/feed.xml` | Picks from the last 24 hours, up to 20 items |
+| Hot events | `https://www.insurance-hot.com/feed/hot.xml` | The top 10 events on the hot board; add `?board=国际` or `全部` for another board |
+| Daily / weekly / monthly | `https://www.insurance-hot.com/feed/daily.xml` · `weekly.xml` · `monthly.xml` | The latest 5 issues of each |
 
-News feeds accept the same filters as the news API, e.g. `/feed.xml?line=车险&region=中国`. RSS also needs an API key, with its own allowance.
+The picks feed accepts the same filters as the news API, e.g. `/feed.xml?line=车险&region=中国` or `/feed.xml?org=中国人寿,国寿财险`. RSS also needs an API key (append `?api_key=`), 100 fetches a day per account, apart from the API allowance.
 
 <a id="notes"></a>
 
