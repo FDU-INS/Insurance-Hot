@@ -28,7 +28,6 @@ Recorded on the live site (www.insurance-hot.com) on November 13, 2026, light th
 | `gif/04-分析与热点.gif` | 热点榜走势、中国与国际切换，点进 No.01 事件看前情与进展、报道时间线 / Trending chart, China and international boards, No. 1 event with developments and timeline |
 | `gif/05-AI工具接入.gif` | MCP 接入页：复制地址、切换 Claude Code / Codex / JSON 配置、3 个工具 / MCP setup: copy the address, switch clients, the 3 tools |
 | `gif/06-智能推送.gif` | 日报、周报、月报，新建“健康险监管周报”邮件订阅 / Daily, weekly and monthly reports; create an email subscription |
+| `promo.gif` | 宣传片（42 秒）转成的动图，README 顶部点击可看[高清视频](https://github.com/user-attachments/assets/e55e28e0-42aa-4bb6-ada9-eb557965b37c) / The 42-second promo film as a GIF; click it at the top of the README for the HD video |
 
 [简体中文](../../../README.md) · [English](../../../README.en.md)
-
-- `promo.gif`：宣传片（42 秒）转成的动图，800 px 宽、8 fps；README 顶部点击可观看[高清视频](https://github.com/user-attachments/assets/e55e28e0-42aa-4bb6-ada9-eb557965b37c)。
