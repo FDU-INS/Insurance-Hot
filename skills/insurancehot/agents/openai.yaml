@@ -1,0 +1,6 @@
+interface:
+  display_name: "InsuranceHot 保险资讯"
+  short_description: "查询保险业大事、机构动态与岗位简报，跟踪主题并逐条附原文出处"
+  default_prompt: "使用 $insurancehot 查询这周保险业的大事，注明日期范围并为每条要闻附上原文出处。"
+policy:
+  allow_implicit_invocation: true

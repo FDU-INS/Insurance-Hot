@@ -160,7 +160,7 @@ InsuranceHot 提供一个远程只读 MCP 服务（Streamable HTTP）和同样�
 不想用一句话接入，也可以自己配置两样东西：
 
 - **MCP 服务**：在 AI 工具的 MCP 设置中添加远程服务（Streamable HTTP），名称 `insurancehot`，地址 `https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey`。
-- **技能**：把 [`SKILL.md`](https://www.insurance-hot.com/skills/insurancehot/SKILL.md) 放进 AI 工具的技能目录（`insurancehot/SKILL.md`）。技能告诉 Agent 怎样用最少的调用回答问题：装了技能，一个问题通常调用 2–4 次；不装可能要 9–12 次。
+- **技能**：把本仓库的 [`skills/insurancehot`](skills/insurancehot) 文件夹整个放进 AI 工具的技能目录。它包含 `SKILL.md` 和机构清单 `references/orgs.md`：用户提到的机构名可能对应多家时，Agent 会先请用户确认，再按机构查询。技能告诉 Agent 怎样用最少的调用回答问题：装了技能，一个问题通常调用 2–4 次；不装可能要 9–12 次。
 
 <details>
 <summary><b>常用工具的写法</b></summary>
@@ -304,6 +304,7 @@ claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/
 | 新闻 | `GET /api/v1/news?…`、`GET /api/v1/news/{id}` |
 | 热点榜、事件 | `GET /api/v1/events?board=中国`、`GET /api/v1/events/{id}` |
 | 报告 | `GET /api/v1/reports/{日报\|周报\|月报}/{期号\|latest}` |
+| 机构清单 | `GET /api/v1/orgs`、`GET /api/v1/orgs?q=国寿`：新闻 `org` 参数可用的机构及候选，不需要 Key，不计入额度 |
 
 <a id="rss"></a>
 

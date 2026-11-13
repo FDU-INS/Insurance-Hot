@@ -160,7 +160,7 @@ It works with AI tools that can read and write local files, such as Codex, DeepS
 If you prefer not to use the one-sentence setup, configure two things yourself:
 
 - **MCP server**: in your AI tool's MCP settings, add a remote server (Streamable HTTP) named `insurancehot` with the address `https://www.insurance-hot.com/api/mcp?api_key=ih_YOUR_KEY`.
-- **Skill**: put [`SKILL.md`](https://www.insurance-hot.com/skills/insurancehot/SKILL.md) in your AI tool's skills directory (`insurancehot/SKILL.md`). It tells the agent how to answer with as few calls as possible: with the skill a question usually takes 2–4 calls; without it, up to 9–12.
+- **Skill**: put this repository's [`skills/insurancehot`](skills/insurancehot) folder in your AI tool's skills directory. It holds `SKILL.md` and the institution list `references/orgs.md`: when a name could mean more than one institution, the agent asks the user before querying. It tells the agent how to answer with as few calls as possible: with the skill a question usually takes 2–4 calls; without it, up to 9–12.
 
 <details>
 <summary><b>Commands for common tools</b></summary>
@@ -294,6 +294,7 @@ The same JSON as MCP, under `/api/v1`; see the [OpenAPI specification](https://w
 | News | `GET /api/v1/news?…`, `GET /api/v1/news/{id}` |
 | Trending board, events | `GET /api/v1/events?board=中国`, `GET /api/v1/events/{id}` |
 | Reports | `GET /api/v1/reports/{日报\|周报\|月报}/{period\|latest}` |
+| Institutions | `GET /api/v1/orgs`, `GET /api/v1/orgs?q=国寿`: the institutions the news `org` parameter accepts, and the candidates for a name; no key needed, not counted |
 
 <a id="rss"></a>
 
