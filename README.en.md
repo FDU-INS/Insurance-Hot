@@ -19,13 +19,6 @@
   <a href="https://github.com/user-attachments/assets/e55e28e0-42aa-4bb6-ada9-eb557965b37c"><img src="docs/assets/readme/promo.gif" width="1000" alt="InsuranceHot promo film (click to watch the HD video)"></a>
 </p>
 
-<p align="center">
-  <a href="https://www.insurance-hot.com/featured?lang=en">Picks</a> ·
-  <a href="https://www.insurance-hot.com/hot?lang=en">Trending</a> ·
-  <a href="https://www.insurance-hot.com/daily?lang=en">Daily</a> ·
-  <a href="https://www.insurance-hot.com/topics?lang=en">Topics</a> ·
-  <a href="#agent">Connect AI tools</a>
-</p>
 
 **InsuranceHot** is an insurance news platform published by Professor Xu Xian's team at Fudan University. It brings regulatory notices, company disclosures and industry reporting from many places together, then filters, classifies, analyses and groups them into an up-to-date, well-sourced picture of the industry. Insurance professionals read it on the website every day; AI agents can call it directly through MCP, a REST API and RSS.
 
