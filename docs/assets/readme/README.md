@@ -30,3 +30,5 @@ Recorded on the live site (www.insurance-hot.com) on November 13, 2026, light th
 | `gif/06-智能推送.gif` | 日报、周报、月报，新建“健康险监管周报”邮件订阅 / Daily, weekly and monthly reports; create an email subscription |
 
 [简体中文](../../../README.md) · [English](../../../README.en.md)
+
+- `promo.gif`：宣传片（42 秒）转成的动图，800 px 宽、8 fps；README 顶部点击可观看[高清视频](https://github.com/user-attachments/assets/e55e28e0-42aa-4bb6-ada9-eb557965b37c)。

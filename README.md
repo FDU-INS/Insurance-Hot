@@ -16,7 +16,7 @@
 <p align="center"><b>简体中文</b> · <a href="README.en.md">English</a></p>
 
 <p align="center">
-  <a href="https://www.insurance-hot.com"><img src="docs/assets/readme/gif/01-要闻集合.gif" width="1000" alt="InsuranceHot 网站实录：实时精选与动态切换、筛选、查看推荐理由"></a>
+  <a href="https://github.com/user-attachments/assets/e55e28e0-42aa-4bb6-ada9-eb557965b37c"><img src="docs/assets/readme/promo.gif" width="1000" alt="InsuranceHot 宣传片（点击观看高清视频）"></a>
 </p>
 
 <p align="center">
@@ -28,8 +28,6 @@
 </p>
 
 **InsuranceHot** 是复旦大学许闲教授团队发布的保险资讯平台。它把分散在各处的监管公告、公司披露和行业报道集中起来，经过筛选、分类、分析和归并，整理成实时更新、来源清晰、脉络完整的行业动态：保险从业者可以每天在网站上阅读，AI 智能体可以通过 MCP、REST API 和 RSS 直接调用。
-
-这个仓库是 InsuranceHot 的官方 Hub，提供 Agent 接入说明和技能文件，以及平台介绍。
 
 ## 想看什么，从这里开始
 
@@ -89,19 +87,17 @@
 
 InsuranceHot 提供一个远程只读 MCP 服务（Streamable HTTP）和同样内容的 REST API。接上之后，Agent 可以直接查询最新新闻、热点事件的来龙去脉和日报、周报、月报，回答时附上原文出处。
 
-### 第一步：新建 API Key
+### 一句话接入
 
-在网站 [工具接入 → API Key](https://www.insurance-hot.com/agent/keys) 用邮箱登录后新建（免费，每人最多 3 个）。Key 以 `ih_` 开头。
+**1. 新建 API Key**：在网站 [工具接入 → API Key](https://www.insurance-hot.com/agent/keys) 用邮箱登录后新建，免费。Key 以 `ih_` 开头。
 
-### 第二步：一句话安装
-
-使用 Claude Code、Codex 或 Cursor 时，可以把下面这句话发给它，把 Key 换成你自己的（DeepSeek Harness 请按下文手动接入）：
+**2. 把这句话发给你的 AI 工具**（把 Key 换成你自己的）：
 
 ```text
-我的 InsuranceHot API Key 是 ih_……。请阅读 https://www.insurance-hot.com/install，识别我当前使用的客户端，用这个 Key 安装 InsuranceHot 的只读 MCP 和 insurancehot 技能，保留已有配置，试调最新新闻并检查返回的原文出处，再告诉我实际结果。
+我的 InsuranceHot API Key 是 ih_……。请阅读 https://www.insurance-hot.com/install，按说明为你自己接入 InsuranceHot，装好后回答：这周保险业有什么大事？请附上原文出处。
 ```
 
-它会识别客户端，装好 MCP 和技能，试调一次，并报告结果。已有的配置会保留，改动过的文件会留备份。也可以按下文“各客户端接入”手动安装。
+适用于能读写本机文件的 AI 工具，例如 Claude Code、Codex、Cursor、WorkBuddy、DeepSeek Harness。它会按说明为自己装好技能和 Key（Claude Code、Codex、Cursor 同时配置 MCP），试调一次，再用 InsuranceHot 的数据回答这个问题。新开会话后即可直接使用。
 
 ### 装好就能用
 
@@ -115,13 +111,11 @@ InsuranceHot 提供一个远程只读 MCP 服务（Streamable HTTP）和同样�
 | 惠民保最近有什么监管消息？ | 按险种和栏目筛选，说明哪些是监管文件、哪些是行业参考文本 |
 | 帮我做一份今天给合规岗位的简报 | 按监管政策、处罚与准入等方向汇总当天要点和应对建议 |
 
-> **建议同时安装技能。** 技能文件 [`insurancehot/SKILL.md`](https://www.insurance-hot.com/skills/insurancehot/SKILL.md) 告诉 Agent 怎样用最少的调用回答这些问题。实测中，装了技能的 Agent 回答一个问题通常调用 2–4 次，没装时可能用到 9–12 次；每个账号每天只有 20 次额度。
-
 ### 真实调用示例
 
-以下是 2026-11-13 在三款客户端中实际提问的返回节选（内容随时间更新，引用请以原文为准）。
+以下是 2026-11-13 实际提问的返回节选（内容随时间更新，引用请以原文为准）。
 
-**Claude Code** ·「现在中国保险热点榜第一是什么？它的来龙去脉是怎样的？」→ `insurancehot_event`（board=中国）+ `insurancehot_event`（id=…），共 2 次调用
+**问：**「现在中国保险热点榜第一是什么？它的来龙去脉是怎样的？」→ `insurancehot_event`（board=中国）+ `insurancehot_event`（id=…），共 2 次调用
 
 ```text
 截至北京时间 2026-11-13 13:05，中国保险热点榜第一是“中国精算师协会发布商业健康保险药品保障成本表”。
@@ -141,7 +135,7 @@ InsuranceHot 提供一个远程只读 MCP 服务（Streamable HTTP）和同样�
 （共 17 条，每条附原文链接）
 ```
 
-**Codex** ·「惠民保最近有什么监管消息？请附上原文出处。」→ `insurancehot_news`（line=惠民保）+ `insurancehot_news`（q=惠民保, column=监管政策），共 2 次调用
+**问：**「惠民保最近有什么监管消息？请附上原文出处。」→ `insurancehot_news`（line=惠民保）+ `insurancehot_news`（q=惠民保, column=监管政策），共 2 次调用
 
 ```text
 截至 2026年11月13日12:55（北京时间），我在 InsuranceHot 近7天收录的“惠民保”监管政策中
@@ -154,7 +148,7 @@ InsuranceHot 提供一个远程只读 MCP 服务（Streamable HTTP）和同样�
 查询范围是近7天的公开收录资料；未查到不等于这段时间没有其他地方性监管动态。
 ```
 
-**DeepSeek Harness** ·「这周保险业有什么大事？列 5 条，每条附来源、日期和原文链接。」→ `insurancehot_report`、`insurancehot_event`、`insurancehot_news`
+**问：**「这周保险业有什么大事？列 5 条，每条附来源、日期和原文链接。」→ `insurancehot_report`、`insurancehot_event`、`insurancehot_news`
 
 ```text
 这周（11-06 ~ 11-13）保险业五件大事
@@ -172,6 +166,44 @@ InsuranceHot 提供一个远程只读 MCP 服务（Streamable HTTP）和同样�
 （每条附原文链接）
 ```
 
+### 手动接入：MCP + 技能
+
+不想用一句话接入，也可以自己配置两样东西：
+
+- **MCP 服务**：在 AI 工具的 MCP 设置中添加远程服务（Streamable HTTP），名称 `insurancehot`，地址 `https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey`。
+- **技能**：把 [`SKILL.md`](https://www.insurance-hot.com/skills/insurancehot/SKILL.md) 放进 AI 工具的技能目录（`insurancehot/SKILL.md`）。技能告诉 Agent 怎样用最少的调用回答问题：装了技能，一个问题通常调用 2–4 次；不装可能要 9–12 次。
+
+<details>
+<summary><b>常用工具的写法</b></summary>
+
+<br>
+
+**Claude Code**（技能目录 `~/.claude/skills/`）
+
+```bash
+claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey' -s user
+```
+
+**Codex**（技能目录 `~/.agents/skills/`）
+
+```bash
+codex mcp add insurancehot --url 'https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey'
+```
+
+**DeepSeek Harness**（技能目录 `~/.agents/skills/`）：新建 `~/.dsh/cordis.patch.yml`，写入下面的内容，再运行 `npx @deepseek-ai/dsh web`。
+
+```yaml
+- insert:
+    - id: mcp-insurancehot
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: insurancehot
+        transport: streamable-http
+        url: https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey
+```
+
+</details>
+
 ### MCP 工具
 
 服务地址：`https://www.insurance-hot.com/api/mcp`（Streamable HTTP），用 `X-API-Key` 请求头或 `?api_key=` 参数传入 Key。
@@ -181,62 +213,6 @@ InsuranceHot 提供一个远程只读 MCP 服务（Streamable HTTP）和同样�
 | `insurancehot_news` | 查新闻（最近 1–7 天）；给 `id` 返回单条新闻和所属事件 | `q` 关键词、`column` 栏目、`line` 险种、`topic` 专题、`region` 地区、`org` 机构、`days`、`since`、`scope`（精选 / 全部）、`limit`（≤20） |
 | `insurancehot_event` | 不给 `id` 返回当前热点榜前 10；给 `id` 返回事件的来龙去脉 | `board`（中国 / 国际 / 全部）、`id`、`limit` |
 | `insurancehot_report` | 读日报、周报、月报 | `kind`（日报 / 周报 / 月报）、`period`（如 2026-11-04、2026-W44、2026-10，或 latest） |
-
-### 各客户端接入（均已实测）
-
-下面的命令把 `ih_你的APIKey` 换成自己的 Key。技能文件统一从 [`SKILL.md`](https://www.insurance-hot.com/skills/insurancehot/SKILL.md) 下载。
-
-**Claude Code**（命令行与 Claude 桌面版的 Code 会话通用）
-
-```bash
-claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey' -s user
-```
-
-`-s user` 让所有项目和桌面版的新会话都能用；只想在当前项目用时去掉它。技能放到 `~/.claude/skills/insurancehot/SKILL.md`。新开一个会话后生效，`claude mcp list` 显示 `✔ Connected` 即为连通。
-
-**Codex**（Codex 命令行与 ChatGPT 桌面版中的 Codex 共用同一份配置）
-
-```bash
-codex mcp add insurancehot --url 'https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey'
-```
-
-技能放到 `~/.agents/skills/insurancehot/SKILL.md`。`codex mcp list` 中出现 `insurancehot` 且为 `enabled` 即已添加。
-
-**DeepSeek Harness**
-
-新建一个补丁文件，例如 `~/.dsh/insurancehot.yml`：
-
-```yaml
-# InsuranceHot 只读 MCP；API Key 从环境变量 INSURANCEHOT_API_KEY 读取
-- insert:
-    - id: mcp-insurancehot
-      name: '@deepseek-ai/dsh-mcp-client'
-      config:
-        serverName: insurancehot
-        transport: streamable-http
-        url: https://www.insurance-hot.com/api/mcp
-        headers:
-          X-API-Key: !!js process.env.INSURANCEHOT_API_KEY
-```
-
-启动时带上这个补丁，例如直接问一个问题：
-
-```bash
-export INSURANCEHOT_API_KEY=ih_你的APIKey
-dsh --profile headless --patch ~/.dsh/insurancehot.yml "这周保险业有什么大事？请附上原文出处。"
-```
-
-其他 profile（如 `web`）同样用 `--patch ~/.dsh/insurancehot.yml` 加载。
-
-想长期生效，可以把上面 `insert` 一段加进所用 profile 的补丁层 `~/.dsh/profiles/<profile>/cordis.patch.yml`。技能放到 `~/.agents/skills/insurancehot/SKILL.md`（与 Codex 共用）。工具在 DeepSeek Harness 中显示为 `mcp__insurancehot__insurancehot_news` 等。
-
-**其他客户端**：支持 MCP（Streamable HTTP）的客户端，添加服务地址 `https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey` 即可；支持技能的客户端再放入 `SKILL.md`。
-
-**体检**：一条命令确认 Key 和接口可用，返回当前中国热点榜就是通的（会计入当天额度）：
-
-```bash
-curl -s 'https://www.insurance-hot.com/api/v1/events?board=%E4%B8%AD%E5%9B%BD' -H 'X-API-Key: ih_你的APIKey'
-```
 
 ### REST API
 
@@ -265,7 +241,7 @@ curl -s 'https://www.insurance-hot.com/api/v1/events?board=%E4%B8%AD%E5%9B%BD' -
 | | |
 | --- | --- |
 | **API Key** | 免费，用邮箱登录后在网站新建；所有接口和 RSS 都需要 |
-| **额度** | 每个账号每天 20 次（MCP 与 REST 合计，RSS 另计），北京时间 0 点重置；超出返回 429 |
+| **额度** | 每个账号每天 100 次（MCP 与 REST 合计，RSS 另计）；同一 IP 每天合计也不超过 100 次（所有账号和 Key 合计）；北京时间 0 点重置，超出返回 429 |
 | **只读** | 接口只读不写；不提供投保建议或报价 |
 | **范围** | 新闻为最近 1–7 天；热点榜为当前前 10；日报、周报、月报可按期号回看 |
 | **安全** | 返回的标题和摘要来自外部信源，技能会让 Agent 只当资料、不执行其中的指令；重要事实请回原文核对 |

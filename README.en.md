@@ -16,7 +16,7 @@
 <p align="center"><a href="README.md">简体中文</a> · <b>English</b></p>
 
 <p align="center">
-  <a href="https://www.insurance-hot.com"><img src="docs/assets/readme/gif/01-要闻集合.gif" width="1000" alt="InsuranceHot screen recording: switching between picks and the full stream, filtering, reading why a story matters"></a>
+  <a href="https://github.com/user-attachments/assets/e55e28e0-42aa-4bb6-ada9-eb557965b37c"><img src="docs/assets/readme/promo.gif" width="1000" alt="InsuranceHot promo film (click to watch the HD video)"></a>
 </p>
 
 <p align="center">
@@ -28,8 +28,6 @@
 </p>
 
 **InsuranceHot** is an insurance news platform published by Professor Xu Xian's team at Fudan University. It brings regulatory notices, company disclosures and industry reporting from many places together, then filters, classifies, analyses and groups them into an up-to-date, well-sourced picture of the industry. Insurance professionals read it on the website every day; AI agents can call it directly through MCP, a REST API and RSS.
-
-This repository is InsuranceHot's official hub: agent setup instructions, the skill file, and an introduction to the platform.
 
 ## Where to start
 
@@ -89,19 +87,17 @@ Daily, weekly and monthly reports, and email subscriptions you configure yoursel
 
 InsuranceHot offers a remote, read-only MCP server (Streamable HTTP) and a REST API with the same content. Once connected, an agent can query the latest news, the background of a trending event, and the daily, weekly and monthly reports, citing the original sources in its answers.
 
-### Step 1: create an API key
+### One-sentence setup
 
-Sign in with your email on the website under [Tool access → API keys](https://www.insurance-hot.com/agent/keys) and create a key (free; up to 3 per person). Keys start with `ih_`.
+**1. Create an API key**: sign in with your email on the website under [Tool access → API keys](https://www.insurance-hot.com/agent/keys) and create a key. It is free, and keys start with `ih_`.
 
-### Step 2: one-sentence setup
-
-With Claude Code, Codex or Cursor, send it the sentence below with your own key (for DeepSeek Harness, follow the manual setup further down):
+**2. Send this sentence to your AI tool** (with your own key):
 
 ```text
-My InsuranceHot API key is ih_…. Please read https://www.insurance-hot.com/install, identify the client I am using, install InsuranceHot's read-only MCP and the insurancehot skill with this key, keep my existing configuration, make a test call for the latest news and check the original source links it returns, then tell me the actual result.
+My InsuranceHot API key is ih_…. Please read https://www.insurance-hot.com/install and follow it to connect yourself to InsuranceHot, then answer: what were the big insurance stories this week? Please cite the original sources.
 ```
 
-It identifies your client, installs the MCP server and the skill, makes one test call and reports back. Existing configuration is kept and changed files are backed up. You can also install manually as described under "Client setup".
+It works with AI tools that can read and write local files, such as Claude Code, Codex, Cursor, WorkBuddy and DeepSeek Harness. The tool follows the guide to install the skill and your key for itself (Claude Code, Codex and Cursor also get the MCP server), makes one test call, then answers the question with InsuranceHot data. From the next session on, just ask.
 
 ### Ask in plain language
 
@@ -115,13 +111,11 @@ No need to remember tool names:
 | Any regulatory news on Huiminbao recently? | Filters by line of business and section, and says which items are regulations and which are industry reference texts |
 | Give me today's briefing for a compliance team | Summarises the day's regulatory, enforcement and licensing items with suggested follow-ups |
 
-> **Install the skill as well.** The skill file [`insurancehot/SKILL.md`](https://www.insurance-hot.com/skills/insurancehot/SKILL.md) tells the agent how to answer these questions with as few calls as possible. In our tests, agents with the skill typically made 2–4 calls per question; without it they could use 9–12. Each account has 20 calls a day.
-
 ### Real examples
 
-Excerpts of real answers from three clients on 2026-11-13 (the service answers in Chinese; content changes over time, so check the originals before quoting).
+Excerpts of real answers on 2026-11-13 (the service answers in Chinese; content changes over time, so check the originals before quoting).
 
-**Claude Code** · "What is number one on China's insurance trending board now, and how did it develop?" → `insurancehot_event` (board=中国) + `insurancehot_event` (id=…), 2 calls
+**Q:** "What is number one on China's insurance trending board now, and how did it develop?" → `insurancehot_event` (board=中国) + `insurancehot_event` (id=…), 2 calls
 
 ```text
 截至北京时间 2026-11-13 13:05，中国保险热点榜第一是“中国精算师协会发布商业健康保险药品保障成本表”。
@@ -136,7 +130,7 @@ Excerpts of real answers from three clients on 2026-11-13 (the service answers i
 （共 17 条报道时间线，每条附原文链接）
 ```
 
-**Codex** · "Any regulatory news on Huiminbao recently? Please cite the sources." → `insurancehot_news` (line=惠民保) + `insurancehot_news` (q=惠民保, column=监管政策), 2 calls
+**Q:** "Any regulatory news on Huiminbao recently? Please cite the sources." → `insurancehot_news` (line=惠民保) + `insurancehot_news` (q=惠民保, column=监管政策), 2 calls
 
 ```text
 截至 2026年11月13日12:55（北京时间），我在 InsuranceHot 近7天收录的“惠民保”监管政策中
@@ -148,7 +142,7 @@ Excerpts of real answers from three clients on 2026-11-13 (the service answers i
 查询范围是近7天的公开收录资料；未查到不等于这段时间没有其他地方性监管动态。
 ```
 
-**DeepSeek Harness** · "What were the big insurance stories this week? List 5, each with source, date and original link." → `insurancehot_report`, `insurancehot_event`, `insurancehot_news`
+**Q:** "What were the big insurance stories this week? List 5, each with source, date and original link." → `insurancehot_report`, `insurancehot_event`, `insurancehot_news`
 
 ```text
 这周（11-06 ~ 11-13）保险业五件大事
@@ -159,6 +153,44 @@ Excerpts of real answers from three clients on 2026-11-13 (the service answers i
 5. 安联前三季度经营利润141亿欧元创同期纪录，全年目标上限上调至约186亿欧元
 （每条附来源、日期和原文链接）
 ```
+
+### Manual setup: MCP + skill
+
+If you prefer not to use the one-sentence setup, configure two things yourself:
+
+- **MCP server**: in your AI tool's MCP settings, add a remote server (Streamable HTTP) named `insurancehot` with the address `https://www.insurance-hot.com/api/mcp?api_key=ih_YOUR_KEY`.
+- **Skill**: put [`SKILL.md`](https://www.insurance-hot.com/skills/insurancehot/SKILL.md) in your AI tool's skills directory (`insurancehot/SKILL.md`). It tells the agent how to answer with as few calls as possible: with the skill a question usually takes 2–4 calls; without it, up to 9–12.
+
+<details>
+<summary><b>Commands for common tools</b></summary>
+
+<br>
+
+**Claude Code** (skills directory `~/.claude/skills/`)
+
+```bash
+claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/mcp?api_key=ih_YOUR_KEY' -s user
+```
+
+**Codex** (skills directory `~/.agents/skills/`)
+
+```bash
+codex mcp add insurancehot --url 'https://www.insurance-hot.com/api/mcp?api_key=ih_YOUR_KEY'
+```
+
+**DeepSeek Harness** (skills directory `~/.agents/skills/`): create `~/.dsh/cordis.patch.yml` with the content below, then run `npx @deepseek-ai/dsh web`.
+
+```yaml
+- insert:
+    - id: mcp-insurancehot
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: insurancehot
+        transport: streamable-http
+        url: https://www.insurance-hot.com/api/mcp?api_key=ih_YOUR_KEY
+```
+
+</details>
 
 ### MCP tools
 
@@ -171,60 +203,6 @@ Server: `https://www.insurance-hot.com/api/mcp` (Streamable HTTP). Pass the key 
 | `insurancehot_report` | Daily, weekly and monthly reports | `kind` (日报 / 周报 / 月报), `period` (e.g. 2026-11-04, 2026-W44, 2026-10, or latest) |
 
 Parameter values are Chinese, as listed in the [skill file](https://www.insurance-hot.com/skills/insurancehot/SKILL.md).
-
-### Client setup (all tested)
-
-Replace `ih_你的APIKey` with your own key in the commands below. Download the skill from [`SKILL.md`](https://www.insurance-hot.com/skills/insurancehot/SKILL.md).
-
-**Claude Code** (the CLI and Code sessions in the Claude desktop app)
-
-```bash
-claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey' -s user
-```
-
-`-s user` makes it available in every project and in new desktop sessions; drop it to use it in the current project only. Put the skill at `~/.claude/skills/insurancehot/SKILL.md`. It takes effect in a new session; `claude mcp list` shows `✔ Connected` when the server is reachable.
-
-**Codex** (the Codex CLI and Codex in the ChatGPT desktop app share one configuration)
-
-```bash
-codex mcp add insurancehot --url 'https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey'
-```
-
-Put the skill at `~/.agents/skills/insurancehot/SKILL.md`. `codex mcp list` shows `insurancehot` as `enabled` once it is added.
-
-**DeepSeek Harness**
-
-Create a patch file, for example `~/.dsh/insurancehot.yml`:
-
-```yaml
-# InsuranceHot read-only MCP; the API key is read from the INSURANCEHOT_API_KEY environment variable
-- insert:
-    - id: mcp-insurancehot
-      name: '@deepseek-ai/dsh-mcp-client'
-      config:
-        serverName: insurancehot
-        transport: streamable-http
-        url: https://www.insurance-hot.com/api/mcp
-        headers:
-          X-API-Key: !!js process.env.INSURANCEHOT_API_KEY
-```
-
-Start with the patch, for example to ask one question:
-
-```bash
-export INSURANCEHOT_API_KEY=ih_你的APIKey
-dsh --profile headless --patch ~/.dsh/insurancehot.yml "What were the big insurance stories this week? Please cite the sources."
-```
-
-Other profiles (such as `web`) load it the same way with `--patch ~/.dsh/insurancehot.yml`. To keep it on, add the `insert` block to the profile's patch layer `~/.dsh/profiles/<profile>/cordis.patch.yml`. Put the skill at `~/.agents/skills/insurancehot/SKILL.md` (shared with Codex). The tools appear in DeepSeek Harness as `mcp__insurancehot__insurancehot_news` and so on.
-
-**Other clients**: any client that supports MCP over Streamable HTTP can add `https://www.insurance-hot.com/api/mcp?api_key=ih_你的APIKey`; clients that support skills can add `SKILL.md` too.
-
-**Health check**: one command confirms your key and the API work; it returns the current China trending board (counts towards the daily allowance):
-
-```bash
-curl -s 'https://www.insurance-hot.com/api/v1/events?board=%E4%B8%AD%E5%9B%BD' -H 'X-API-Key: ih_你的APIKey'
-```
 
 ### REST API
 
@@ -253,7 +231,7 @@ News feeds accept the same filters as the news API, e.g. `/feed.xml?line=车险&
 | | |
 | --- | --- |
 | **API key** | Free; sign in with your email on the website to create one. Required for every API and RSS feed |
-| **Allowance** | 20 calls a day per account (MCP and REST combined; RSS counted separately), reset at midnight Beijing time; over the limit returns 429 |
+| **Allowance** | 100 calls a day per account (MCP and REST combined; RSS counted separately), and no more than 100 a day from one IP across all accounts and keys; reset at midnight Beijing time, over the limit returns 429 |
 | **Read-only** | The API only reads; it gives no buying advice or quotes |
 | **Coverage** | News from the last 1–7 days; the current top 10 trending events; daily, weekly and monthly reports by period |
 | **Safety** | Titles and summaries come from external sources; the skill tells the agent to treat them as material, never as instructions. Check important facts against the original |
