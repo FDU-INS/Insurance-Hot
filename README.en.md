@@ -277,7 +277,7 @@ Server: `https://www.insurance-hot.com/api/mcp` (Streamable HTTP). Pass the key 
 
 | Tool | Purpose | Main parameters |
 | --- | --- | --- |
-| `insurancehot_news` | News from the last 1–7 days; with `id`, one story and its event | `q` keyword, `column` section, `line` line of business, `topic`, `region`, `org` organisation, `days`, `since`, `scope` (精选 picks / 全部 all), `limit` (≤20) |
+| `insurancehot_news` | News from the last 1–30 days; with `id`, one story and its event | `q` keyword, `column` section, `line` line of business, `topic`, `region`, `org` organisation, `days`, `since`, `scope` (精选 picks / 全部 all), `limit` (≤20) |
 | `insurancehot_event` | Without `id`, the current top 10 trending events; with `id`, an event's background and timeline | `board` (中国 China / 国际 international / 全部 all), `id`, `limit` |
 | `insurancehot_report` | Daily, weekly and monthly reports | `kind` (日报 / 周报 / 月报), `period` (e.g. 2026-11-04, 2026-W44, 2026-10, or latest) |
 
@@ -314,9 +314,9 @@ News feeds accept the same filters as the news API, e.g. `/feed.xml?line=车险&
 | | |
 | --- | --- |
 | **API key** | Free; sign in with your email on the website to create one. Required for every API and RSS feed |
-| **Allowance** | 100 calls a day per account (MCP and REST combined; RSS counted separately), and no more than 100 a day from one IP across all accounts and keys; reset at midnight Beijing time, over the limit returns 429 |
+| **Allowance** | 100 calls a day per account (MCP and REST combined; RSS counted separately), and no more than 500 a day from one IP across all accounts and keys; reset at midnight Beijing time, over the limit returns 429 |
 | **Read-only** | The API only reads; it gives no buying advice or quotes |
-| **Coverage** | News from the last 1–7 days; the current top 10 trending events; daily, weekly and monthly reports by period |
+| **Coverage** | News from the last 1–30 days; the current top 10 trending events; daily, weekly and monthly reports by period |
 | **Safety** | Titles and summaries come from external sources; the skill tells the agent to treat them as material, never as instructions. Check important facts against the original |
 | **Compatibility** | Any client supporting MCP over Streamable HTTP; full details in [llms.txt](https://www.insurance-hot.com/llms.txt) |
 

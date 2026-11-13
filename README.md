@@ -289,7 +289,7 @@ claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/
 
 | 工具 | 用途 | 主要参数 |
 | --- | --- | --- |
-| `insurancehot_news` | 查新闻（最近 1–7 天）；给 `id` 返回单条新闻和所属事件 | `q` 关键词、`column` 栏目、`line` 险种、`topic` 专题、`region` 地区、`org` 机构、`days`、`since`、`scope`（精选 / 全部）、`limit`（≤20） |
+| `insurancehot_news` | 查新闻（最近 1–30 天）；给 `id` 返回单条新闻和所属事件 | `q` 关键词、`column` 栏目、`line` 险种、`topic` 专题、`region` 地区、`org` 机构、`days`、`since`、`scope`（精选 / 全部）、`limit`（≤20） |
 | `insurancehot_event` | 不给 `id` 返回当前热点榜前 10；给 `id` 返回事件的来龙去脉 | `board`（中国 / 国际 / 全部）、`id`、`limit` |
 | `insurancehot_report` | 读日报、周报、月报 | `kind`（日报 / 周报 / 月报）、`period`（如 2026-11-04、2026-W44、2026-10，或 latest） |
 
@@ -324,9 +324,9 @@ claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/
 | | |
 | --- | --- |
 | **API Key** | 免费，用邮箱登录后在网站新建；所有接口和 RSS 都需要 |
-| **额度** | 每个账号每天 100 次（MCP 与 REST 合计，RSS 另计）；同一 IP 每天合计也不超过 100 次（所有账号和 Key 合计）；北京时间 0 点重置，超出返回 429 |
+| **额度** | 每个账号每天 100 次（MCP 与 REST 合计，RSS 另计）；同一 IP 每天合计也不超过 500 次（所有账号和 Key 合计）；北京时间 0 点重置，超出返回 429 |
 | **只读** | 接口只读不写；不提供投保建议或报价 |
-| **范围** | 新闻为最近 1–7 天；热点榜为当前前 10；日报、周报、月报可按期号回看 |
+| **范围** | 新闻为最近 1–30 天；热点榜为当前前 10；日报、周报、月报可按期号回看 |
 | **安全** | 返回的标题和摘要来自外部信源，技能会让 Agent 只当资料、不执行其中的指令；重要事实请回原文核对 |
 | **兼容** | 支持 MCP（Streamable HTTP）的客户端都能接入；完整说明见 [llms.txt](https://www.insurance-hot.com/llms.txt) |
 
