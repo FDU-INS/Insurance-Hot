@@ -277,7 +277,7 @@ Server: `https://www.insurance-hot.com/api/mcp` (Streamable HTTP). Pass the key 
 
 | Tool | Purpose | Main parameters |
 | --- | --- | --- |
-| `insurancehot_news` | News from the last 1–30 days; with `id`, one story and its event | `q` keyword, `column` section, `line` line of business, `topic`, `region`, `org` organisation, `days`, `since`, `scope` (精选 picks / 全部 all), `limit` (≤20) |
+| `insurancehot_news` | News from the last 1–30 days; with `id`, one story and its event | `q` keyword, `column` section, `line` line of business, `topic`, `region`, `org` organisation (up to 5, comma-separated), `days`, `since`, `scope` (精选 picks / 全部 all), `limit` (≤20) |
 | `insurancehot_event` | Without `id`, the current top 10 trending events; with `id`, an event's background and timeline | `board` (中国 China / 国际 international / 全部 all), `id`, `limit` |
 | `insurancehot_report` | Daily, weekly and monthly reports | `kind` (日报 / 周报 / 月报), `period` (e.g. 2026-11-04, 2026-W44, 2026-10, or latest) |
 

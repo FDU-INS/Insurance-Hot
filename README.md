@@ -289,7 +289,7 @@ claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/
 
 | 工具 | 用途 | 主要参数 |
 | --- | --- | --- |
-| `insurancehot_news` | 查新闻（最近 1–30 天）；给 `id` 返回单条新闻和所属事件 | `q` 关键词、`column` 栏目、`line` 险种、`topic` 专题、`region` 地区、`org` 机构、`days`、`since`、`scope`（精选 / 全部）、`limit`（≤20） |
+| `insurancehot_news` | 查新闻（最近 1–30 天）；给 `id` 返回单条新闻和所属事件 | `q` 关键词、`column` 栏目、`line` 险种、`topic` 专题、`region` 地区、`org` 机构（可填多家，逗号分隔，最多 5 家）、`days`、`since`、`scope`（精选 / 全部）、`limit`（≤20） |
 | `insurancehot_event` | 不给 `id` 返回当前热点榜前 10；给 `id` 返回事件的来龙去脉 | `board`（中国 / 国际 / 全部）、`id`、`limit` |
 | `insurancehot_report` | 读日报、周报、月报 | `kind`（日报 / 周报 / 月报）、`period`（如 2026-11-04、2026-W44、2026-10，或 latest） |
 
