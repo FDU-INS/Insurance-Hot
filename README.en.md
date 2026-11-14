@@ -279,7 +279,7 @@ Server: `https://www.insurance-hot.com/api/mcp` (Streamable HTTP). Pass the key 
 | --- | --- | --- |
 | `insurancehot_news` | News from the last 1–30 days; with `id`, one story and its event | `q` keyword, `column` section, `line` line of business, `topic`, `region`, `org` organisation (up to 5, comma-separated), `days`, `since`, `scope` (精选 picks / 全部 all), `limit` (≤20) |
 | `insurancehot_event` | Without `id`, the current top 10 trending events; with `id`, an event's background and timeline | `board` (中国 China / 国际 international / 全部 all), `id`, `limit` |
-| `insurancehot_report` | Daily, weekly and monthly reports | `kind` (日报 / 周报 / 月报), `period` (e.g. 2026-11-04, 2026-W44, 2026-10, or latest) |
+| `insurancehot_report` | Daily, weekly and monthly reports | `kind` (日报 / 周报 / 月报), `date` (YYYY-MM-DD: the daily of that day, or the weekly or monthly covering it; latest by default) |
 
 Parameter values are Chinese, as listed in the [skill file](https://www.insurance-hot.com/skills/insurancehot/SKILL.md).
 
@@ -287,13 +287,13 @@ Parameter values are Chinese, as listed in the [skill file](https://www.insuranc
 
 ### REST API
 
-The same JSON as MCP, under `/api/v1`; see the [OpenAPI specification](https://www.insurance-hot.com/openapi-v1.json).
+The same JSON as MCP, under `/api/v1`. The [OpenAPI specification](https://www.insurance-hot.com/openapi-v1.json) describes every field returned for news, the hot board, stories, reports and the institution list.
 
 | Purpose | Endpoint |
 | --- | --- |
 | News | `GET /api/v1/news?…`, `GET /api/v1/news/{id}` |
 | Trending board, events | `GET /api/v1/events?board=中国`, `GET /api/v1/events/{id}` |
-| Reports | `GET /api/v1/reports/{日报\|周报\|月报}/{period\|latest}` |
+| Reports | `GET /api/v1/reports/{日报\|周报\|月报}/{date\|latest}`, e.g. `/api/v1/reports/周报/2026-11-10` for the weekly covering 10 November |
 | Institutions | `GET /api/v1/orgs`, `GET /api/v1/orgs?q=国寿`: the institutions the news `org` parameter accepts, and the candidates for a name; no key needed, not counted |
 
 <a id="rss"></a>
@@ -315,9 +315,9 @@ The picks feed accepts the same filters as the news API, e.g. `/feed.xml?line=�
 | | |
 | --- | --- |
 | **API key** | Free; sign in with your email on the website to create one. Required for every API and RSS feed |
-| **Allowance** | 100 calls a day per account (MCP and REST combined; RSS counted separately), and no more than 500 a day from one IP across all accounts and keys; reset at midnight Beijing time, over the limit returns 429 |
+| **Allowance** | 100 calls a day per account (MCP and REST combined; RSS counted separately); reset at midnight Beijing time, over the limit returns 429 |
 | **Read-only** | The API only reads; it gives no buying advice or quotes |
-| **Coverage** | News from the last 1–30 days; the current top 10 trending events; daily, weekly and monthly reports by period |
+| **Coverage** | News from the last 1–30 days; the current top 10 trending events; daily, weekly and monthly reports by date |
 | **Safety** | Titles and summaries come from external sources; the skill tells the agent to treat them as material, never as instructions. Check important facts against the original |
 | **Compatibility** | Any client supporting MCP over Streamable HTTP; full details in [llms.txt](https://www.insurance-hot.com/llms.txt) |
 

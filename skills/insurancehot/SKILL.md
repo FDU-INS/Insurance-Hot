@@ -30,7 +30,7 @@ insurancehot/
 |---|---|
 | `insurancehot_news` | 查新闻：最近 1–30 天，按关键词、栏目、险种、专题、地区、机构筛选；给 `id` 返回一条新闻和它所属的事件 |
 | `insurancehot_event` | 看事件：不给 `id` 是当前热点榜（`board` 选中国、国际或全部）；给 `id` 是这件事的来龙去脉 |
-| `insurancehot_report` | 读日报、周报、月报（`kind`、`period`） |
+| `insurancehot_report` | 读日报、周报、月报：`kind` 选类型，`date`（YYYY-MM-DD）返回那天的日报、那天所在那周的周报或所在那月的月报；不给 `date` 是最近一期 |
 
 MCP 不可用时改用 REST（字段与 MCP 返回的 JSON 相同，说明见 `/openapi-v1.json`），请求头带 `X-API-Key: 用户的 Key`：
 
@@ -38,12 +38,24 @@ MCP 不可用时改用 REST（字段与 MCP 返回的 JSON 相同，说明见 `/
 |---|---|
 | 新闻 | `GET /api/v1/news?…`、`GET /api/v1/news/{id}` |
 | 热点榜、事件 | `GET /api/v1/events?board=中国`、`GET /api/v1/events/{id}` |
-| 报告 | `GET /api/v1/reports/{日报|周报|月报}/{期号|latest}` |
+| 报告 | `GET /api/v1/reports/{日报|周报|月报}/{日期|latest}`，日期写 YYYY-MM-DD |
 | 机构清单 | `GET /api/v1/orgs`、`GET /api/v1/orgs?q=名称`（不需要 Key，不计入额度） |
 
-所有调用都要用户的 API Key（网站工具接入页 `/agent/keys` 新建）。Key 取自用户在对话中给出的值，或安装时保存的本机文件 `~/.insurancehot/api_key`（只读取使用，不要在回答中显示）。一个账号每天 100 次（MCP 与 REST 合计），同一 IP 每天合计也不超过 500 次，北京时间 0 点重置：一个问题尽量一两次调用解决，不要重复调用；额度用完（429）时如实告诉用户。不要猜测未列出的工具或接口。
+所有调用都要用户的 API Key（网站工具接入页 `/agent/keys` 新建）。Key 取自用户在对话中给出的值，或安装时保存的本机文件 `~/.insurancehot/api_key`（只读取使用，不要在回答中显示）。一个账号每天 100 次（MCP 与 REST 合计），北京时间 0 点重置：一个问题尽量一两次调用解决，不要重复调用；额度用完（429）时如实告诉用户。不要猜测未列出的工具或接口。
 
 如果上面的站点地址仍是未替换的占位符，先用已连接的 MCP；HTTP 调用使用用户提供的或安装时保存的地址。没有实际地址时说明缺少连接信息，不能把占位符当成域名，也不能换用其他站点。
+
+## 该用哪个
+
+| 想知道 | 用 |
+|---|---|
+| 发生了什么（可筛选，最近 30 天） | `insurancehot_news` |
+| 现在最热的事件 | `insurancehot_event`（不给 id） |
+| 一件事的来龙去脉 | `insurancehot_event id=…`，id 取自新闻的 `event` 字段或热点榜 |
+| 编辑好的日报、周报、月报 | `insurancehot_report kind=… date=…` |
+| 某个名称对应哪家机构 | 机构清单（见下文“机构怎么确定”） |
+
+返回的每个字段在 `/openapi-v1.json` 里都有说明。常用的：新闻的 `time`（原发时间，北京时间）、`original`（原文链接）、`event`（所属事件 id）；热点榜的 `rank`、`latest`（最新进展）；事件的 `digest`（来龙去脉）、`reports`（最新报道）；报告的 `covers`（覆盖时间）、`state`（已定稿、更新中或已发布）、`sections`（各分版条目）。
 
 ## 参数
 
@@ -98,7 +110,7 @@ MCP 不可用时改用 REST（字段与 MCP 返回的 JSON 相同，说明见 `/
 
 ### 日报、周报、月报
 
-`insurancehot_report` 不给 `period` 时返回最近一期已定稿的，`state` 和 `covers` 说明它是哪一期、覆盖哪段时间，回答时照实写，不要说成“今天的”。正在更新的当天日报用它的期号（定稿那天的日期）获取，`state` 是“更新中”。
+`insurancehot_report` 用日期取报告：`date=2026-11-10` 时，日报是 11 月 10 日那期，周报是 11 月 10 日所在那周，月报是 11 月。不用推算期号。不给 `date` 时返回最近一期已定稿的，它可能是前一天、上一周或上个月的。回答时以返回的 `covers`（覆盖时间）和 `state` 为准照实写，不要说成“今天的”或“本周的”。当天的日报在定稿前也能按日期取，`state` 是“更新中”；本周、本月的周报和月报出刊前查不到，如实告诉用户最近一期是哪一期。
 
 ## 回答与出处
 
