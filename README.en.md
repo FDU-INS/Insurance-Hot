@@ -38,6 +38,7 @@
   - [RSS](#rss)
 - [Before you start](#notes)
 - [Feedback](#feedback)
+- [Acknowledgements](#acknowledgements)
 - [Star history](#star-history)
 
 <a id="intro"></a>
@@ -328,6 +329,16 @@ The picks feed accepts the same filters as the news API, e.g. `/feed.xml?line=è½
 Summaries and analysis are AI-assisted; quote the original sources. For problems or source corrections, use [Feedback](https://www.insurance-hot.com/feedback) on the website.
 
 If you find it useful, a **Star** helps you find your way back.
+
+<a id="acknowledgements"></a>
+
+## Acknowledgements
+
+This project is built upon and extends the open-source [AIHOT](https://github.com/KKKKhazix/AIHOT) project. Building on its foundational framework and core workflows, we have further developed and expanded its functionalities to address the specific business characteristics and information needs of the insurance industry, including information collection, content curation, event organization, and industry reporting.
+
+The product design and functional concepts of this project were also inspired by [AI Safety HOT](https://github.com/wuyoscar/AISafetyHot). In particular, we drew inspiration from its approaches to real-time news aggregation, trending event tracking, and the organization and presentation of topic-specific information.
+
+We sincerely thank the developers and open-source communities behind AIHOT and AI Safety HOT for sharing their excellent projects, technical practices, and design ideas, which have provided an important foundation and valuable inspiration for this project.
 
 <a id="star-history"></a>
 
