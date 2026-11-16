@@ -342,7 +342,7 @@ We sincerely thank the developers and open-source communities behind AIHOT and A
 
 **We would also like to express our sincere gratitude to all members who contributed to the development of this project, including LIN Chenwei, ZHANG Linqi, HUAN Hongxin, CHEN Changyu, CAO Wanqing, and CHENG Yan, all of whom are members of Professor Xian XU’s team at Fudan University**.
 
-For business inquiries or issue reports, please contact [lqzhang26@m.fudan.edu.cn](mailto:lqzhang26@m.fudan.edu.cn).
+For business inquiries or issue reports, please contact [insurance@fudan.edu.cn](mailto:insurance@fudan.edu.cn).
 
 <a id="star-history"></a>
 
