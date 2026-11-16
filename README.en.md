@@ -16,7 +16,7 @@
 <p align="center"><a href="README.md">简体中文</a> · <b>English</b></p>
 
 <p align="center">
-  <a href="https://github.com/user-attachments/assets/0bf97c5d-ccb3-43ff-9e3a-863bd908fbde"><img src="docs/assets/readme/promo.gif" width="1000" alt="InsuranceHot promo film (click to watch the HD video)"></a>
+  <a href="https://github.com/user-attachments/assets/0bf97c5d-ccb3-43ff-9e3a-863bd908fbde"><img src="docs/assets/readme/promo-en.gif" width="1000" alt="InsuranceHot promo film (click to watch the HD video)"></a>
 </p>
 
 
