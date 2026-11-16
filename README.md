@@ -352,6 +352,8 @@ claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/
 
 **此外，我们衷心感谢所有参与本项目开发与建设的成员，包括林陈威、张麟琪、还鸿新、陈昌昱、曹琬清和程岩，他们均为复旦大学许闲教授团队的成员。**
 
+商务合作或问题反馈，请联系：[lqzhang26@m.fudan.edu.cn](mailto:lqzhang26@m.fudan.edu.cn)。
+
 <a id="star-history"></a>
 
 ## Star 历史
