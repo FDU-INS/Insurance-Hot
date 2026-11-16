@@ -342,7 +342,7 @@ claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/
 
 <a id="acknowledgements"></a>
 
-## 致谢（Acknowledgements）
+## 致谢
 
 本项目基于 [AIHOT](https://github.com/KKKKhazix/AIHOT) 开源项目进行二次开发。我们在其基础框架和核心工作流程之上，结合保险行业的业务特点与资讯需求，对信息采集、内容筛选、事件组织及行业报告等功能进行了进一步开发与扩展。
 
