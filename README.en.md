@@ -340,6 +340,8 @@ The product design and functional concepts of this project were also inspired by
 
 We sincerely thank the developers and open-source communities behind AIHOT and AI Safety HOT for sharing their excellent projects, technical practices, and design ideas, which have provided an important foundation and valuable inspiration for this project.
 
+We would also like to express our sincere gratitude to all members who contributed to the development of this project, including LIN Chenwei, ZHANG Linqi, HUAN Hongxin, CHEN Changyu, CAO Wanqing, and CHENG Yan, all of whom are members of Professor Xian XU’s team at Fudan University.
+
 <a id="star-history"></a>
 
 ## Star history

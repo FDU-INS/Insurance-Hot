@@ -350,6 +350,8 @@ claude mcp add --transport http insurancehot 'https://www.insurance-hot.com/api/
 
 我们衷心感谢 AIHOT 和 AI Safety HOT 的开发者及其开源社区，感谢他们分享的优秀项目、技术实践与设计理念，为本项目的开发提供了重要的基础与启发。
 
+此外，我们衷心感谢所有参与本项目开发与建设的成员，包括林陈威、张麟琪、还鸿新、陈昌昱、曹琬清和程岩，他们均为复旦大学许闲教授团队的成员。
+
 <a id="star-history"></a>
 
 ## Star 历史
