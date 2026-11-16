@@ -2,7 +2,7 @@
   <img src="docs/assets/readme/brand-lockup.svg" alt="InsuranceHot" width="360">
 </p>
 
-<p align="center"><b>全球保险资讯，人可以读，AI 可以用。</b></p>
+<p align="center"><b>全球保险资讯，人与AI皆可用。</b></p>
 
 <p align="center">
   <a href="https://www.insurance-hot.com"><img src="https://img.shields.io/badge/Website-insurance--hot.com-0969da" alt="Website"></a>
